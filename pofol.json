@@ -1,7 +1,6 @@
 {
 	"data":[
 		{"project":"SNU 팩트체크","link":"http://factcheck.snu.ac.kr/","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 제작(반응형)","skill":"HTML, CSS, JAVASCRIPT","date":"2017.05","contribution":"100%"},
-		{"project":"엠포스 SNS-MEDIA","link":"http://www.sns-media.co.kr/","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 제작(반응형)","skill":"WordPress","date":"2019.03","contribution":"100%"},
 		{"project":"한화다이렉트 해피 핑거 캠페인","link":"http://factcheck.snu.ac.kr/","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 제작(반응형)","skill":"HTML, CSS, JAVASCRIPT","date":"2017.07","contribution":"100%"},
 		{"project":"쌍용자동차 모바일(영문)","link":"http://m.smotor.com/global/","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 제작","skill":"HTML, CSS, JAVASCRIPT","date":"2017.08","contribution":"100%"},
 		{"project":"쌍용자동차 모바일(국문)","link":"http://m.smotor.com/kr/","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 리뉴얼","skill":"HTML, CSS, JAVASCRIPT","date":"2017.08","contribution":"100%"},
@@ -33,6 +32,6 @@
 		{"project":"더비즈케어","link":"http://www.bizcare.co.kr/landing/","image":"img/portfolio/ex.jpg","pofolType":"랜딩페이지","skill":"HTML, CSS, JAVASCRIPT","date":"2017.12","contribution":"100%"},
 		{"project":"이문자","link":"http://adup.kr/mms/","image":"img/portfolio/ex.jpg","pofolType":"랜딩페이지","skill":"HTML, CSS, JAVASCRIPT","date":"2017.05","contribution":"100%"},
 		{"project":"애드업 마케팅","link":"http://adup.kr/marketing/","image":"img/portfolio/ex.jpg","pofolType":"랜딩페이지","skill":"HTML, CSS, JAVASCRIPT","date":"2017.05","contribution":"100%"},
-		{"project":"로시크숨마","link":"http://sum37losecsumma.com/","image":"img/portfolio/ex.jpg","pofolType":"랜딩페이지","skill":"HTML, CSS, JAVASCRIPT","date":"2018.08","contribution":"100%"},
+		{"project":"로시크숨마","link":"http://sum37losecsumma.com/","image":"img/portfolio/ex.jpg","pofolType":"랜딩페이지","skill":"HTML, CSS, JAVASCRIPT","date":"2018.08","contribution":"100%"}
 	]
 }
