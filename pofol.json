@@ -1,6 +1,7 @@
 {
 	"data":[
 		{"project":"SNU 팩트체크","link":"http://factcheck.snu.ac.kr/","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 제작(반응형)","skill":"HTML, CSS, JAVASCRIPT","date":"2017.05","contribution":"100%"},
+		{"project":"엠포스 SNS-MEDIA","link":"http://www.sns-media.co.kr/","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 제작(반응형)","skill":"WordPress","date":"2019.03","contribution":"100%"},
 		{"project":"한화다이렉트 해피 핑거 캠페인","link":"http://factcheck.snu.ac.kr/","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 제작(반응형)","skill":"HTML, CSS, JAVASCRIPT","date":"2017.07","contribution":"100%"},
 		{"project":"쌍용자동차 모바일(영문)","link":"http://m.smotor.com/global/","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 제작","skill":"HTML, CSS, JAVASCRIPT","date":"2017.08","contribution":"100%"},
 		{"project":"쌍용자동차 모바일(국문)","link":"http://m.smotor.com/kr/","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 리뉴얼","skill":"HTML, CSS, JAVASCRIPT","date":"2017.08","contribution":"100%"},
@@ -8,7 +9,7 @@
 		{"project":"미오디오","link":"http://www.miodio.co.kr/main/index.php","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 제작(PC)","skill":"HTML, CSS, JAVASCRIPT","date":"2018.04","contribution":"100%"},
 		{"project":"포토파트너스","link":"http://www.photopartners.co.kr/","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 제작(반응형)","skill":"HTML, CSS, JAVASCRIPT","date":"2019.02","contribution":"100%"},
 		{"project":"마켓인유","link":"http://2ndhands.kr","image":"img/portfolio/ex.jpg","pofolType":"쇼핑몰 제작(PC,모바일)","skill":"HTML, CSS, JAVASCRIPT","date":"2019.02","contribution":"100%"},
-		{"project":"뮤지컬마켓","link":"#","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 제작(PC,모바일)","skill":"HTML, CSS, JAVASCRIPT","date":"2019.02","contribution":"100%"},
+		{"project":"뮤지컬마켓","link":"http://61.73.105.10:9190","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 제작(PC,모바일)","skill":"HTML, CSS, JAVASCRIPT","date":"2019.02","contribution":"100%"},
 		{"project":"마스터픽스","link":"http://www.mpx.co.kr/main/index","image":"img/portfolio/ex.jpg","pofolType":"쇼핑몰 제작(PC,모바일)","skill":"HTML, CSS, JAVASCRIPT","date":"2017.05","contribution":"100%"},
 		{"project":"블록체인CNS","link":"http://blockchaincns.com/","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 제작(PC,모바일)","skill":"HTML, CSS, JAVASCRIPT","date":"2018.08","contribution":"100%"},
 		{"project":"숭실대학교 인문한국플러스사업단","link":"http://www.ssuhkplus.com/","image":"img/portfolio/ex.jpg","pofolType":"홈페이지 제작(반응형)","skill":"HTML, CSS, JAVASCRIPT","date":"2019.01","contribution":"100%"},
@@ -33,6 +34,5 @@
 		{"project":"이문자","link":"http://adup.kr/mms/","image":"img/portfolio/ex.jpg","pofolType":"랜딩페이지","skill":"HTML, CSS, JAVASCRIPT","date":"2017.05","contribution":"100%"},
 		{"project":"애드업 마케팅","link":"http://adup.kr/marketing/","image":"img/portfolio/ex.jpg","pofolType":"랜딩페이지","skill":"HTML, CSS, JAVASCRIPT","date":"2017.05","contribution":"100%"},
 		{"project":"로시크숨마","link":"http://sum37losecsumma.com/","image":"img/portfolio/ex.jpg","pofolType":"랜딩페이지","skill":"HTML, CSS, JAVASCRIPT","date":"2018.08","contribution":"100%"},
-		{"project":"오클리","link":"http://oakleykorea.co.kr/","image":"img/portfolio/ex.jpg","pofolType":"랜딩페이지","skill":"HTML, CSS, JAVASCRIPT","date":"2018.08","contribution":"100%"}
 	]
 }

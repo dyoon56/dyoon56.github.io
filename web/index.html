@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="description" content="" />
+	<meta property="og:title" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:description" content="" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" type="image/x-icon" href="">
+
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" href="css/slick.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.bpopup.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	<script src="js/common.js"></script>
+	<title>수동예림 웹진</title>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<div class="inner">
+			<a href="#" class="btn_menu">메뉴</a>
+			<h1 class="logo"><a href="#"><img src="images/logo.png" width="70" alt="예림" /></a></h1>
+			<a href="#" class="btn_search">검색</a>
+		</div>
+		<div id="nav">
+			<div class="nav_inner">
+				<ul class="menu cleafix">
+					<li><a href="#">인문학카페</a></li>
+					<li class="add"><a href="#">문단의, 오늘</a>
+						<ul>
+							<li><a href="#">문단소식</a></li>
+							<li><a href="#">신간안내</a></li>
+							<li><a href="#">추천도서</a></li>
+						</ul>
+					</li>
+					<li><a href="#">이슈 인 이슈</a></li>
+					<li class="add"><a href="#">시 &amp; 예술</a>
+						<ul>
+							<li><a href="#">Poem &amp; Photo</a></li>
+							<li><a href="#">Poem &amp; Pottery</a></li>
+							<li><a href="#">Poem &amp; Painting</a></li>
+						</ul>
+					</li>
+					<li class="add"><a href="#">바움문학상</a>
+						<ul>
+							<li><a href="#">바움문학상 소개</a></li>
+							<li><a href="#">공모 선정작</a></li>
+							<li><a href="#">역대 수상자 및 수상작</a></li>
+						</ul>
+					</li>
+					<li class="add"><a href="#">신인작가공모</a>
+						<ul>
+							<li><a href="#">공모 소개</a></li>
+							<li><a href="#">공모 선정작</a></li>
+							<li><a href="#">공모 제출</a></li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#" class="go_withreading"><img src="images/withreading.gif" width="117" alt="WITH READING" /></a>
+				<ul class="util cleafix">
+					<li><a href="#"><i class="ico_login"></i>로그인</a></li>
+					<li><a href="#"><i class="ico_cs"></i>고객센터</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="searchWrap">
+			<div class="search_inner">
+				<div class="input_wrap">
+					<input type="text" placeholder="검색어를 입력해주세요." />
+					<button>검색</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="container">
+		<div class="visual">
+			<div style="background-image:url(images/visual.jpg);"></div>
+			<div style="background-image:url(images/visual.jpg);"></div>
+			<div style="background-image:url(images/visual.jpg);"></div>
+		</div>
+		<script>
+			$(".visual").slick({
+				dots:true,
+				arrows:false,
+				autoplay:true,
+				autoplaySpeed:2000
+			});
+		</script>
+		<!-- //////////Start 볼륨////////// -->
+		<div class="main_section volume">
+			<div class="title">
+				<h2>Vol. <b>00</b> <span>(예비호3)</span></h2>
+				<div class="styled-select slate">
+					<select name="" id="">
+						<option value="">지난호 보기</option>
+					</select>
+				</div>
+			</div>
+			<div class="cate_section mundan">
+				<a href="#" style="background-image:url(images/person_lg.jpg);">
+					<div class="info">
+						<h3>문단의, 오늘</h3>
+						<p>김구용詩문학상에 '독창적 실험정신' 하상만 시인</p>
+					</div>
+				</a>
+			</div>
+			<div class="cate_section issue">
+				<a href="#" style="background-image:url(images/person_md.jpg);">
+					<div class="info">
+						<h3>이슈 인 이슈</h3>
+						<p>문정희 시인</p>
+					</div>
+				</a>
+			</div>
+			<div class="cate_section siyesul">
+				<a href="#" style="background-image:url(images/img_ex.jpg);">
+					<div class="info table">
+						<div class="th">
+							<div class="table">
+								<div class="td">
+									<h3 class="title_arrow2">시 &amp; 예술</h3>	
+								</div>
+							</div>
+						</div>
+						<div class="poem_wrap td">
+							<h4>사랑을 잃고 나는 쓰네</h4>
+							<span>기형도</span>
+							<p class="poem">잘 있거라, 짧았던 밤들아<br>
+							창 밖을 떠돌던 겨울 안개들아<br>
+							아무것도 모르던 촛불들아, 잘있거라.<br><br>
+
+							공포를 기다리던 흰 종이들아<br>
+							망설임을 대신하던 눈물들아 잘 있거라,<br><br>
+
+							더 이상 내 것이 아닌 열망들아<br>
+							장님처럼 나 이제 더듬거리며 문을 잠그네<br>
+							가엾은 내 사랑 빈집에 갇혔네</p>
+						</div>
+					</div>
+					<div class="siyesul_bg"></div>
+				</a>
+			</div>
+		</div><!-- //////////End 볼륨////////// -->
+
+		<!-- //////////Start 인문학카페////////// -->
+		<div class="main_section cafe">
+			<div class="inner">
+				<h3 class="title_arrow"><span>인문학</span>카페</h3>
+				<ul>
+					<li>
+						<a href="#" class="clearfix">
+							<div class="img" style="background-image:url(images/person_sm.jpg);"></div>
+							<div class="info">
+								<span>교수</span>
+								<p class="name">김용범</p>
+								<p class="para">
+									누이여 또다시 은비늘 더미를 일으켜 세우며 시간이 빠르게 이동하였다.
+								</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="clearfix">
+							<div class="img" style="background-image:url(images/person_sm.jpg);"></div>
+							<div class="info">
+								<span>교수</span>
+								<p class="name">김용범</p>
+								<p class="para">
+									누이여 또다시 은비늘 더미를 일으켜 세우며 시간이 빠르게 이동하였다.
+								</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="clearfix">
+							<div class="img" style="background-image:url(images/person_sm.jpg);"></div>
+							<div class="info">
+								<span>교수</span>
+								<p class="name">김용범</p>
+								<p class="para">
+									누이여 또다시 은비늘 더미를 일으켜 세우며 시간이 빠르게 이동하였다.
+								</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="clearfix">
+							<div class="img" style="background-image:url(images/person_sm.jpg);"></div>
+							<div class="info">
+								<span>교수</span>
+								<p class="name">김용범</p>
+								<p class="para">
+									누이여 또다시 은비늘 더미를 일으켜 세우며 시간이 빠르게 이동하였다.
+								</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div><!-- //////////End 인문학카페////////// -->
+
+		<!-- //////////Start 신간안내/추천도서////////// -->
+		<div class="main_section new_recommend">
+			<div class="inner">
+				<ul class="tab">
+					<li class="active"><a href="#">신간안내</a></li>
+					<li><a href="#">추천도서</a></li>
+				</ul>
+
+				<!-- 신간안내 -->
+				<div class="slide_wrap" id="new">
+					<div class="slide">
+						<div class="book_item">
+							<a href="#">
+								<div class="book_img" style="background-image:url(images/book_sm.jpg);"></div>
+								<p class="title">올해의 미숙올해의 미숙올해의 미숙올해의 미숙올해의 미숙올해의 미숙올해의 미숙1</p>
+								<p class="info">정원 글그림 | 창비</p>
+								<p class="price">13,500원</p>
+							</a>
+						</div>
+						<div class="book_item">
+							<a href="#">
+								<div class="book_img" style="background-image:url(images/book_sm.jpg);"></div>
+								<p class="title">올해의 미숙</p>
+								<p class="info">정원 글그림 | 창비</p>
+								<p class="price">13,500원</p>
+							</a>
+						</div>
+						<div class="book_item">
+							<a href="#">
+								<div class="book_img" style="background-image:url(images/book_sm.jpg);"></div>
+								<p class="title">올해의 미숙</p>
+								<p class="info">정원 글그림 | 창비</p>
+								<p class="price">13,500원</p>
+							</a>
+						</div>
+						<div class="book_item">
+							<a href="#">
+								<div class="book_img" style="background-image:url(images/book_sm.jpg);"></div>
+								<p class="title">올해의 미숙</p>
+								<p class="info">정원 글그림 | 창비</p>
+								<p class="price">13,500원</p>
+							</a>
+						</div>
+						<div class="book_item">
+							<a href="#">
+								<div class="book_img" style="background-image:url(images/book_sm.jpg);"></div>
+								<p class="title">올해의 미숙</p>
+								<p class="info">정원 글그림 | 창비</p>
+								<p class="price">13,500원</p>
+							</a>
+						</div>
+						<div class="book_item">
+							<a href="#">
+								<div class="book_img" style="background-image:url(images/book_sm.jpg);"></div>
+								<p class="title">올해의 미숙</p>
+								<p class="info">정원 글그림 | 창비</p>
+								<p class="price">13,500원</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- 추천도서 -->
+				<div class="slide_wrap hide" id="recommend" style="display:none;">
+					<div class="slide">
+						<div class="book_item">
+							<a href="#">
+								<div class="book_img" style="background-image:url(images/book_sm.jpg);"></div>
+								<p class="title">올해의 미숙2</p>
+								<p class="info">정원 글그림 | 창비</p>
+								<p class="price">13,500원</p>
+							</a>
+						</div>
+						<div class="book_item">
+							<a href="#">
+								<div class="book_img" style="background-image:url(images/book_sm.jpg);"></div>
+								<p class="title">올해의 미숙</p>
+								<p class="info">정원 글그림 | 창비</p>
+								<p class="price">13,500원</p>
+							</a>
+						</div>
+						<div class="book_item">
+							<a href="#">
+								<div class="book_img" style="background-image:url(images/book_sm.jpg);"></div>
+								<p class="title">올해의 미숙</p>
+								<p class="info">정원 글그림 | 창비</p>
+								<p class="price">13,500원</p>
+							</a>
+						</div>
+						<div class="book_item">
+							<a href="#">
+								<div class="book_img" style="background-image:url(images/book_sm.jpg);"></div>
+								<p class="title">올해의 미숙</p>
+								<p class="info">정원 글그림 | 창비</p>
+								<p class="price">13,500원</p>
+							</a>
+						</div>
+						<div class="book_item">
+							<a href="#">
+								<div class="book_img" style="background-image:url(images/book_sm.jpg);"></div>
+								<p class="title">올해의 미숙</p>
+								<p class="info">정원 글그림 | 창비</p>
+								<p class="price">13,500원</p>
+							</a>
+						</div>
+						<div class="book_item">
+							<a href="#">
+								<div class="book_img" style="background-image:url(images/book_sm.jpg);"></div>
+								<p class="title">올해의 미숙</p>
+								<p class="info">정원 글그림 | 창비</p>
+								<p class="price">13,500원</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<script>
+					$(".new_recommend .slide").slick({
+						dots:true,
+						arrows:true,
+						autoplay:true,
+						autoplaySpeed:2000,
+						slidesToShow: 2,
+						responsive: [
+							{
+							  breakpoint: 1024,
+							  settings: {
+							    slidesToShow: 4,
+							    slidesToScroll: 4
+							  }
+							},
+							{
+							  breakpoint: 768,
+							  settings: {
+							    slidesToShow: 3,
+							    slidesToScroll: 3
+							  }
+							},
+							{
+							  breakpoint: 640,
+							  settings: {
+							    slidesToShow: 2,
+							    slidesToScroll: 2
+							  }
+							}
+						]
+
+					});
+					$(".main_section.new_recommend .tab li").click(function(e){
+						e.preventDefault();
+
+						var idx = $(this).index();
+						$(".main_section.new_recommend .tab li").removeClass("active");
+						$(this).addClass("active");
+						$(".slide_wrap").hide();
+						$(".slide_wrap").eq(idx).show();
+						$(".new_recommend .slide").slick('setPosition');
+					});
+				</script>
+			</div>
+		</div><!-- //////////End 신간안내/추천도서////////// -->
+	</div>
+	<div id="footer">
+		<div class="footer_top">
+			<ul>
+				<li><a href="javascript:openPopup('#popIntro')">웹진소개</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보 처리방침</a></li>
+				<li><a href="#">제휴안내</a></li>
+				<li><a href="#">구독하기</a></li>
+				<li><a href="#">후원하기</a></li>
+			</ul>
+		</div>
+		<div class="footer_bottom">
+			<div class="inner clearfix">
+				<h1 class="logo"><a href="#"><img src="images/bottom_logo.png" width="73" alt="예림" /></a></h1>
+				<address>
+					회사명: ㈜애드업  |  대표자:이원석  |  주소:서울특별시 마포구 연남로 31, 홍덕빌딩 3층<br />전화:070-4236-8536<br />
+					사업자등록번호:128-87-08636 사업자정보조회<br />통신판매업신고번호:제2018-서울마포-0067호  |  개인정보 보호책임자:김승준<br />이메일:m@adup.kr
+					<p class="copyright">Copyright&copy;Photo Partners Inc. All Rights Reserved.</p>
+				</address>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- //////////Start 웹진소개 팝업////////// -->
+<div id="popIntro">
+	<ul class="tab">
+		<li class="active"><a href="#intro">소개</a></li>
+		<li><a href="#issuer">만드는 사람들</a></li>
+	</ul>
+	<div class="intro intro_section" id="intro">
+		<img src="images/img_ex2.jpg" alt="" />
+		<p>김광림 시인의 시 정신과 아시아시인회의 문학 정신을 이어받아<br>
+		현대예술의 새로운 흐름인 장르와 장르 간의 융합을 비롯하여 다양하고<br>
+		참신한 시도를 통하여 우리 현대시의 지평을 넓히고,<br>
+		존재가치를 빛내는 활동을 하고자 합니다.<br>
+		아울러 독자들과의 새로운 소통 채널을 마련함으로써 독자의 층위를 넓히고<br>
+		이를 바탕으로 우리시의 유용성과 가치를 극대화하는데 기여하고자 합니다.
+		</p>
+		<a href="#" class="btn_confirm btn_bdr">확인</a>
+	</div>
+	<div class="issuer intro_section mCustomScrollbar" id="issuer">
+		<div class="item_inner type1">
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>김산환 <span>발행인</span></h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>김산환 <span>발행인</span></h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>김산환 <span>발행인</span></h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>김산환 <span>발행인</span></h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>김산환 <span>발행인</span></h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>김산환 <span>발행인</span></h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>김산환 <span>발행인</span></h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>김산환 <span>발행인</span></h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>김산환 <span>발행인</span></h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+		</div>
+		<h3>편집위원</h3>
+		<div class="item_inner type2">
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>이름</h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>이름</h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>이름</h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>이름</h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>이름</h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>이름</h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>이름</h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>이름</h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>이름</h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>이름</h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+		</div>
+		<h3>고문</h3>
+		<div class="item_inner type2">
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>이름</h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>이름</h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>이름</h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="img" style="background-image:url(images/person_lg.jpg);"></div>
+				<h2>이름</h2>
+				<ul class="hypen">
+					<li>약력</li>
+					<li>약력</li>
+					<li>약력</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<a href="#" class="btn_close">닫기</a>
+	<script>
+		$("#popIntro .tab li").click(function(e){
+			e.preventDefault();
+			var tgHref = $(this).find("a").attr("href");
+
+			$("#popIntro .tab li").removeClass('active');
+			$(this).addClass('active');
+			$(".intro_section").hide();
+			$(tgHref).show();
+		});
+	</script>
+</div><!-- //////////End 웹진소개 팝업////////// -->
+</body>
+</html>

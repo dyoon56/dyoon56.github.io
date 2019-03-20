@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="description" content="" />
+	<meta property="og:title" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:description" content="" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" type="image/x-icon" href="">
+
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" href="css/slick.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.bpopup.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	<script src="js/common.js"></script>
+	<title>수동예림 웹진</title>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<div class="inner">
+			<a href="#" class="btn_menu">메뉴</a>
+			<h1 class="logo"><a href="#"><img src="images/logo.png" width="70" alt="예림" /></a></h1>
+			<a href="#" class="btn_search">검색</a>
+		</div>
+		<div id="nav">
+			<div class="nav_inner">
+				<ul class="menu cleafix">
+					<li><a href="#">인문학카페</a></li>
+					<li class="add"><a href="#">문단의, 오늘</a>
+						<ul>
+							<li><a href="#">문단소식</a></li>
+							<li><a href="#">신간안내</a></li>
+							<li><a href="#">추천도서</a></li>
+						</ul>
+					</li>
+					<li><a href="#">이슈 인 이슈</a></li>
+					<li class="add"><a href="#">시 &amp; 예술</a>
+						<ul>
+							<li><a href="#">Poem &amp; Photo</a></li>
+							<li><a href="#">Poem &amp; Pottery</a></li>
+							<li><a href="#">Poem &amp; Painting</a></li>
+						</ul>
+					</li>
+					<li class="add"><a href="#">바움문학상</a>
+						<ul>
+							<li><a href="#">바움문학상 소개</a></li>
+							<li><a href="#">공모 선정작</a></li>
+							<li><a href="#">역대 수상자 및 수상작</a></li>
+						</ul>
+					</li>
+					<li class="add"><a href="#">신인작가공모</a>
+						<ul>
+							<li><a href="#">공모 소개</a></li>
+							<li><a href="#">공모 선정작</a></li>
+							<li><a href="#">공모 제출</a></li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#" class="go_withreading"><img src="images/withreading.gif" width="117" alt="WITH READING" /></a>
+				<ul class="util cleafix">
+					<li><a href="#"><i class="ico_login"></i>로그인</a></li>
+					<li><a href="#"><i class="ico_cs"></i>고객센터</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="searchWrap">
+			<div class="search_inner">
+				<div class="input_wrap">
+					<input type="text" placeholder="검색어를 입력해주세요." />
+					<button>검색</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="indicator">
+		<ol class="indi_menu clearfix">
+			<li class="depth1"><a href="#">문단의, 오늘</a>
+				<ol>
+					<li><a href="#">인문학카페</a></li>
+					<li><a href="#">문단의, 오늘</a></li>
+					<li><a href="#">이슈 인 이슈</a></li>
+					<li><a href="#">시 &amp; 예술</a></li>
+					<li><a href="#">바움문학상</a></li>
+					<li><a href="#">신인작가공모</a></li>
+				</ol>
+			</li>
+			<li class="depth2"><a href="#"><span>문단소식</span></a>
+				<ol>
+					<li><a href="#">문단소식</a></li>
+					<li><a href="#">신간안내</a></li>
+					<li><a href="#">추천도서</a></li>
+				</ol>
+			</li>
+		</ol>
+	</div>
+	<div id="container" class="sub">
+		<div class="inner">
+			<p class="page_title">문단의, 오늘</p>
+			<div class="detail_wrap">
+				<div class="title_wrap">
+					<h2>김구용詩문학상에 '독창적 실험정신' 하상만 시인</h2>
+					<p>김구용詩문학상에 '독창적 실험정신' 하상만 시인</p>
+				</div>
+				<div class="content">
+					<img src="images/img_ex4.jpg" alt="" />
+					<h3>김구용詩문학상에 '독창적 실험정신' 하상만 시인</h3>
+					<p>인천에서 발간되는 시문학 전문 계간지 '리토피아'(주간·장종권)가 제9회 김구용시문학상 수상자로 하상만 시인(시집 '오늘은 두 번의 내일보다 좋다'·사진)을 선정했다고 4일 밝혔다. 리토피아는 지난 1월 본심(심사위원 강우식·허영만·장종권)을 통해 하 시인을 수상자로 정했다.<br><br>
+					하 시인은 경남 마산에서 출생했으며 2005년 문학사상으로 등단했다. 시집으로 '간장'(실천문학), '오늘은 두 번의 내일보다 좋다'(시인동네)가 있으며, 제9회 김장생문학상 대상을 수상했다.<br><br>
+					김구용시문학상은 시류에 편승하지 않고 독창적인 시 세계를 끊임없이 추구하며, 새로운 시에 대한 실험정신이 가득한 등단 15년 이내의 시인이 발간한 시집 중 엄정한 
+					심사를 거쳐 선정하고 있다.<br>
+					시인 개인의 잠재적인 미래성 평가와 차세대 한국시단의 주역으로서의 가능성이 심사의 주요 기준이다. 상금은 300만원이다.<br>
+					시상식은 오는 23일 오후 5시 인천 부평문화사랑방에서 열리는 제9회 김구용문학제의 일환으로 개최된다. 
+					</p>
+				</div>
+				<div class="text-center">
+					<a href="#" class="btn_bdr">목록으로</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_top">
+			<ul>
+				<li><a href="javascript:openPopup('#popIntro')">웹진소개</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보 처리방침</a></li>
+				<li><a href="#">제휴안내</a></li>
+				<li><a href="#">구독하기</a></li>
+				<li><a href="#">후원하기</a></li>
+			</ul>
+		</div>
+		<div class="footer_bottom">
+			<div class="inner clearfix">
+				<h1 class="logo"><a href="#"><img src="images/bottom_logo.png" width="73" alt="예림" /></a></h1>
+				<address>
+					회사명: ㈜애드업  |  대표자:이원석  |  주소:서울특별시 마포구 연남로 31, 홍덕빌딩 3층<br />전화:070-4236-8536<br />
+					사업자등록번호:128-87-08636 사업자정보조회<br />통신판매업신고번호:제2018-서울마포-0067호  |  개인정보 보호책임자:김승준<br />이메일:m@adup.kr
+					<p class="copyright">Copyright&copy;Photo Partners Inc. All Rights Reserved.</p>
+				</address>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
