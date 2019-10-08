@@ -43,7 +43,6 @@ $.namespace("App");
 App = {
 	init : function(){
 		App.chkBrowser();
-		App.is_mobile();
 	},
 	chkBrowser : function(){
 		// 브라우저 및 버전을 구하기 위한 변수들.
@@ -84,8 +83,6 @@ App = {
 		    // iOS 아이폰, 아이패드, 아이팟
 		    $("body").addClass("ios");
 		}
-	},is_mobile(){
-		return /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 	}
 }
 
@@ -421,7 +418,6 @@ App.main = {
 			}
 		});
 	},motionEvent:function(){
-		if(App.is_mobile()) return;
 
 		$('.motion_card').each(function() {
 
