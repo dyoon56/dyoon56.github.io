@@ -45,22 +45,22 @@
 			$(this).toggleClass("on");
 		});
 
-		$(".popup .btn_close").click(function(e){
-			e.preventDefault();
+		// $(".popup .btn_close").click(function(e){
+		// 	e.preventDefault();
 
-			if($(".btn_layer_chk").hasClass("on")){
-				setCookie( "maindiv", "done" , 1 );
-				document.all['layerPopup'].style.display = "none";
-			}else{
-				document.all['layerPopup'].style.display = "none";
-			}
-		});
+		// 	if($(".btn_layer_chk").hasClass("on")){
+		// 		setCookie( "maindiv", "done" , 1 );
+		// 		document.all['layerPopup'].style.display = "none";
+		// 	}else{
+		// 		document.all['layerPopup'].style.display = "none";
+		// 	}
+		// });
 	});
-	function setCookie( name, value, expiredays ) {
-		var todayDate = new Date();
-		todayDate.setDate( todayDate.getDate() + expiredays ); 
-		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-	}
+	// function setCookie( name, value, expiredays ) {
+	// 	var todayDate = new Date();
+	// 	todayDate.setDate( todayDate.getDate() + expiredays ); 
+	// 	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+	// }
 </script>
 
 <div id="layerPopup" class="popup popLayout" tabindex="0">
@@ -81,20 +81,55 @@
 		<div class="layer_bottom">
 			<a href="#" class="btn_layer_chk">다시보지않기</a>
 		</div>
-		<a href="#" class="btn_close">닫기</a>
+		<a href="javascript:closeLayer();" class="btn_close">닫기</a>
 	</form>
 </div>
 
 <script>
-    cookiedata = document.cookie;
+    // cookiedata = document.cookie;
 
-    if ( cookiedata.indexOf("maindiv=done") < 0 ){     
-    	console.log(cookiedata)
-        document.all['layerPopup'].style.display = "block";
+    // if ( cookiedata.indexOf("maindiv=done") < 0 ){     
+    // 	console.log(cookiedata)
+    //     document.all['layerPopup'].style.display = "block";
+    // }
+    // else {
+    // 	console.log(cookiedata)
+    //     document.all['layerPopup'].style.display = "none";
+    // }
+    if(getCookie("layerPopup") != "done" ){
+        $("#layerPopup").show();
     }
-    else {
-    	console.log(cookiedata)
-        document.all['layerPopup'].style.display = "none";
+    function getCookie( name ) //저장된 쿠키구하기
+    { 
+        var nameOfCookie = name + "="; 
+        var x = 0; 
+        while ( x <= document.cookie.length ) 
+        { 
+            var y = (x+nameOfCookie.length); 
+            if ( document.cookie.substring( x, y ) == nameOfCookie ) 
+
+            { 
+                if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 ) 
+                    endOfCookie = document.cookie.length;
+                return unescape( document.cookie.substring( y, endOfCookie ) ); 
+            } 
+            x = document.cookie.indexOf( " ", x ) + 1; 
+            if ( x == 0 ) 
+                break; 
+        } 
+        return ""; 
+    }
+    function setCookie( name, value, expiredays ){ //쿠키 설정
+    	var todayDate = new Date();
+    	todayDate.setDate( todayDate.getDate() + expiredays );
+    	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString()  + ";"
+    }
+
+    function closeLayer(){ // 오늘하루보기가 체크 유무에 따른 쿠기 설정
+        if($(".btn_layer_chk").hasClass("on")){
+        	setCookie("layerPopup", "done" ,1);
+        }
+        $("#layerPopup").hide();
     }
 </script>
 <!-- //팝업 -->
