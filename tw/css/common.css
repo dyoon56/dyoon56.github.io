@@ -436,7 +436,7 @@ transform: translateZ(0) scale(1.1) rotate(0.1deg);transition: 1800ms;transition
 .popup#layerPopup .btn_layer_chk.on {background-position:right -38px;}
 .popup#popComplete {padding:60px 0 30px;background:#fff;max-width:430px;margin-left:-215px;}
 .popup#popComplete p {font-size:18px;line-height:1.5;}
-.popup#popComplete .btn_close {font-size:18px;margin-top:15px;}
+.popup#popComplete .close {display:block;text-indent:-9999em;background:url(../images/common/btn_close.png) no-repeat center;width:23px;height:23px;right:20px;top:14px;position:absolute;font-size:18px;margin-top:15px;}
 
 @media all and (max-width:1499px){
   #header .header_inner,#siteMap .header_inner {width:1200px;}
