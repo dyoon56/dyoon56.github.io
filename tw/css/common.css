@@ -423,6 +423,15 @@ transform: translateZ(0) scale(1.1) rotate(0.1deg);transition: 1800ms;transition
 .popup#layerPopup .pop_content p {font-size:22px;line-height:1.5;margin-top:30px;word-break:keep-all;}
 .popup#layerPopup .btn_close {display:block;text-indent:-9999em;background:url(../images/common/btn_close.png) no-repeat center;width:23px;height:23px;right:20px;top:14px;position:absolute;}
 .popup#layerPopup .layer_bottom {text-align:right;margin-top:15px;}
+
+.popup#layerPopup .chk_box {margin: 0;padding: 0;display: inline-block;}
+.popup#layerPopup .chk_box input[type=checkbox] {margin-left: 0;padding: 0;}
+.popup#layerPopup .chk_box input[type=checkbox] {position: absolute;overflow: hidden;clip: rect(0 0 0 0);height: 1px;width: 1px;margin: -1px;padding: 0px;border: 0;}
+.popup#layerPopup .chk_box input[type=checkbox]+label{padding-right:60px;height:38px;display: inline-block;line-height:38px;background-repeat: no-repeat;background-position:right 0;font-size:24px;vertical-align: middle;cursor: pointer;opacity: 1;color:#fff;}
+.popup#layerPopup .chk_box input[type=checkbox]:checked+label{background-position:right -38px;}
+.popup#layerPopup .chk_box label {background-image: url(../images/common/chkbox.png);}
+.popup#layerPopup .chk_box label span {display:table-cell;vertical-align:middle;height:38px;font-size:24px;color:#fff;}
+
 .popup#layerPopup .btn_layer_chk {color:#fff;font-size:24px;background:url(../images/common/chkbox.png) no-repeat right 0;padding-right:60px;line-height:38px;display:block;font-weight:300;transition:none;}
 .popup#layerPopup .btn_layer_chk.on {background-position:right -38px;}
 .popup#popComplete {padding:60px 0 30px;background:#fff;max-width:430px;margin-left:-215px;}

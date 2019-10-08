@@ -76,7 +76,13 @@
 			포장 작업에 많은 시간이 소요되어 출고가 지연되고있습니다.</p>
 		</div>
 		<div class="layer_bottom">
-			<a href="#" class="btn_layer_chk">다시보지않기</a>
+			<!-- <a href="#" class="btn_layer_chk">다시보지않기</a> -->
+			<div class="chk_box">
+				<input type="checkbox" name="chkDone" id="chkDone" title="오늘 다시 보지 않기" />
+				<label for="chkDone">
+					<span>오늘 다시 보지 않기</span>	
+				</label>
+			</div>
 		</div>
 		<a href="javascript:closeLayer();" class="btn_close">닫기</a>
 	</form>
@@ -95,15 +101,13 @@
     // }
 
     // 다시보지않기 체크
-    $(".btn_layer_chk").click(function(e){
-		e.preventDefault();
-		$(this).toggleClass("on");
-	});
+ //    $(".btn_layer_chk").click(function(e){
+	// 	e.preventDefault();
+	// 	$(this).toggleClass("on");
+	// });
 
     if(getCookie("layerPopup") != "done" ){
         $("#layerPopup").show();
-    }else{
-    	$("#layerPopup").hide();
     }
     function getCookie( name ) //저장된 쿠키구하기
     { 
@@ -132,9 +136,8 @@
     }
 
     function closeLayer(){ // 오늘하루보기가 체크 유무에 따른 쿠기 설정
-        if($(".btn_layer_chk").hasClass("on")){
-        	setCookie("layerPopup", "done" ,1);
-        }
+    	if (document.pop_form.popup.checked){setCookie("layerPopup", "done" ,1);}
+        
         $("#layerPopup").hide();
     }
 </script>
