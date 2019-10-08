@@ -89,9 +89,11 @@
     cookiedata = document.cookie;
 
     if ( cookiedata.indexOf("maindiv=done") < 0 ){     
+    	console.log(cookiedata)
         document.all['layerPopup'].style.display = "block";
     }
     else {
+    	console.log(cookiedata)
         document.all['layerPopup'].style.display = "none";
     }
 </script>

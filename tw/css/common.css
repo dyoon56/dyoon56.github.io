@@ -328,6 +328,7 @@ opacity: 0.6;}
 
 #container.sub_page {margin-top:90px;}
 
+#visual {z-index:8;}
 #visual .slick-slide {background-repeat:no-repeat;background-position:center;background-size:cover;height:993px;text-align:center;}
 #visual .slick-slide .table {height:100%;}
 #visual .slick-slide .table .td {height:100%;}

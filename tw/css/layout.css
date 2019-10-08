@@ -4,18 +4,18 @@
 .main_mid_slider .slider_tab {background:#016a96;position:relative;right:50%;margin-right:200px;}
 .main_mid_slider .slider_tab ul {padding:60px 0;width:400px;float:right;}
 .main_mid_slider .slider_tab li {height:56px;}
-.main_mid_slider .slider_tab li a {color:#cddbe4;font-size:26px;display:inline-block;padding-bottom:13px;position:relative;}
-.main_mid_slider .slider_tab li a:after {content:'';display:block;height:3px;background:#fff;width:0;transition:all .3s;position:absolute;left:0;bottom:0;}
+.main_mid_slider .slider_tab li a {color:#cddbe4;font-size:26px;display:inline-block;padding-bottom:13px;position:relative;padding-right:40px;}
+.main_mid_slider .slider_tab li a:after {content:'';display:block;height:3px;background:#fff;width:0;position:absolute;left:0;bottom:0;transition:all .3s;}
 .main_mid_slider .slider_tab li.active a {font-size:34px;font-weight:800;color:#fff;}
-.main_mid_slider .slider_tab li.active a:after {width:calc(100% + 40px);}
+.main_mid_slider .slider_tab li.active a:after {width:100%;}
 .main_mid_slider .slider_wrap {position:absolute;width:1123px;top:320px;left:50%;margin-left:-378px;}
 .main_mid_slider .slider .slick-slide {transition:all .3s;border-radius:20px;position:relative;}
-.main_mid_slider .slider .slick-slide > div {background-repeat:no-repeat;background-position:center;background-size:cover;padding:312px 0 0 57px;width:100%;height:100%;border-radius:20px;position:relative;}
+.main_mid_slider .slider .slick-slide > div {background-repeat:no-repeat;background-position:center;background-size:cover;padding:312px 0 0 57px;width:100%;height:100%;border-radius:20px;position:relative;overflow:hidden;}
 .main_mid_slider .slider .slick-slide h2 {color:#fff;font-size:28px;position:relative;}
 .main_mid_slider .slider .slick-slide p {color:#fff;font-size:22px;margin-top:10px;line-height:1.3;position:relative;}
 .main_mid_slider .slider .slick-slide.slick-active.slick-current {z-index:1;}
 .main_mid_slider .slider .slick-slide.slick-active.slick-current > div {width:683px;height:430px;}
-.main_mid_slider .slider .slick-slide.slick-active.slick-current > div:before {content:'';display:block;background-image: linear-gradient(transparent, rgba(0,0,0,0.89));position:absolute;left:0;top:0;width:100%;height:100%;border-radius:20px;}
+.main_mid_slider .slider .slick-slide.slick-active.slick-current > div:before {content:'';display:block;position:absolute;left:0;bottom:0;width:100%;background:url(../images/sub/slick_current_bg.png) repeat-x center bottom;height:316px;}
 .main_mid_slider .slider .slick-slide.slick-active.slick-current + .slick-slide > div {width:540px;height:380px;margin-top:28px;padding:273px 0 0 140px;}
 .main_mid_slider .slider .slick-slide.slick-active.slick-current + .slick-slide > div:before {content:'';display:block;background:rgba(255,255,255,0.49);position:absolute;left:0;top:0;width:100%;height:100%;border-radius:20px;}
 .main_mid_slider .slider .slick-slide.slick-active.slick-current + .slick-slide h2 {font-size:24px;}
@@ -58,6 +58,7 @@
 .main_notice {position:relative;height:93px;background:#fff;}
 .main_notice .skew {background:#333;position:absolute;width:570px;height:100%;left:50%;margin-left:-960px;}
 .main_notice .skew:after {content:'';display:block;width:110px;height:93px;position:absolute;right:-47px;top:0;transform:skew(45deg);background:#333;}
+.ie .main_notice .skew:after {top:1px;}
 .main_notice:before {content:'';display:block;}
 .main_notice h2 {line-height:93px;padding-left:40px;float:left;position:relative;width:440px;}
 .main_notice h2 a {font-size:24px;color:#fff;}
@@ -83,7 +84,7 @@
 .board_list td.tit {padding-left:60px;text-align:left;}
 .board_list td a {font-size:18px;color:#666;}
 .news_list ol {font-size:0;}
-.news_list ol li {display:inline-block;vertical-align:top;width:calc((100% - 22px) / 3);margin-right:11px;margin-bottom:20px;position:relative;background:#fff;}
+.news_list ol li {display:inline-block;vertical-align:top;width:calc((100% - 25px) / 3);margin-right:11px;margin-bottom:20px;position:relative;background:#fff;}
 .news_list ol li:nth-child(3n) {margin-right:0;}
 .news_list ol li a {display:block;}
 .news_list ol li .img {background-repeat:no-repeat;background-size:cover;background-position:center;height:324px;}
