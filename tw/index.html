@@ -40,10 +40,7 @@
 <!-- 팝업 -->
 <script>
 	$(function(){
-		$(".btn_layer_chk").click(function(e){
-			e.preventDefault();
-			$(this).toggleClass("on");
-		});
+		
 
 		// $(".popup .btn_close").click(function(e){
 		// 	e.preventDefault();
@@ -96,8 +93,17 @@
     // 	console.log(cookiedata)
     //     document.all['layerPopup'].style.display = "none";
     // }
+
+    // 다시보지않기 체크
+    $(".btn_layer_chk").click(function(e){
+		e.preventDefault();
+		$(this).toggleClass("on");
+	});
+
     if(getCookie("layerPopup") != "done" ){
         $("#layerPopup").show();
+    }else{
+    	$("#layerPopup").hide();
     }
     function getCookie( name ) //저장된 쿠키구하기
     { 
