@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="description" content="" />
+	<meta property="og:title" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:description" content="" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="images/common/favicon.png">
+	<link rel="stylesheet" href="css/slick.css" />
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.bpopup.min.js"></script>
+	<script src="js/prefixfree.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/common.js"></script>
+	<!--[if (gte IE 6)&(lte IE 8)]><script type="text/javascript" src="js/selectivizr-min.js"></script><![endif]-->
+	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+	<!--[if lt IE 10]><script src="js/placeholders.min.js"></script><![endif]-->
+	<title>TAEWOONG LOGISTICS</title>
+</head>
+<body>
+<div class="skip">
+	<a href="#gnb">주메뉴 바로가기</a>
+	<a href="#container">본문 바로가기</a>
+</div>
+
+<!-- 팝업 -->
+<script>
+	$(function(){
+		$(".btn_layer_chk").click(function(e){
+			e.preventDefault();
+			$(this).toggleClass("on");
+		});
+
+		$(".popup .btn_close").click(function(e){
+			e.preventDefault();
+
+			if($(".btn_layer_chk").hasClass("on")){
+				setCookie( "maindiv", "done" , 1 );
+				document.all['layerPopup'].style.display = "none";
+			}else{
+				document.all['layerPopup'].style.display = "none";
+			}
+		});
+	});
+	function setCookie( name, value, expiredays ) {
+		var todayDate = new Date();
+		todayDate.setDate( todayDate.getDate() + expiredays ); 
+		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+	}
+</script>
+
+<div id="layerPopup" class="popup popLayout" tabindex="0">
+    <form name="pop_form">
+		<div class="pop_top">
+			<h1>태웅로직스</h1>
+		</div>
+		<div class="pop_content">
+			<h2>심천지점 일부품목 출고 지연안내</h2>
+			<p>안녕하세요. 심천지점입니다.
+			심천지점이전으로 인한 정리작업은 모두 완료하였습니다.
+			다만, 이전하면서 이전한곳으로 신청한 자재들
+			에어캡, 박스, 포장비닐, 마대 등 일체의 자제 재품을
+			대량주문을 했으나 출고처에서 제품부족으로 발송이 지연되어
+			기존에 있던 자재들로 출고처리를 진행하고있어
+			포장 작업에 많은 시간이 소요되어 출고가 지연되고있습니다.</p>
+		</div>
+		<div class="layer_bottom">
+			<a href="#" class="btn_layer_chk">다시보지않기</a>
+		</div>
+		<a href="#" class="btn_close">닫기</a>
+	</form>
+</div>
+
+<script>
+    cookiedata = document.cookie;
+
+    if ( cookiedata.indexOf("maindiv=done") < 0 ){     
+        document.all['layerPopup'].style.display = "block";
+    }
+    else {
+        document.all['layerPopup'].style.display = "none";
+    }
+</script>
+<!-- //팝업 -->
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<div class="header_inner">
+			<h1 class="logo"><a href="index.html"><img src="images/common/logo_wh.png" alt="태웅로직스" /></a></h1>
+			<div class="lang">
+				<a href="#">KO</a>
+				<ul>
+					<li><a href="#">EN</a></li>
+					<li><a href="#">CN</a></li>
+				</ul>
+			</div>
+			<div id="gnb" class="clearfix">
+				<ul class="gnb">
+					<li>
+						<a href="business/business_marine.html">사업영역</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="business/business_marine.html">해상 운송</a></li>
+								<li><a href="business/business_aivation.html">항공 운송</a></li>
+								<li><a href="business/business_cis.html">CIS/철도</a></li>
+								<li><a href="business/business_project.html">프로젝트</a></li>
+								<li><a href="business/business_consulting.html">내륙/물류 컨설팅</a></li>
+								<li><a href="business/business_multi.html">복합 운송</a></li>
+								<li><a href="business/business_warehouse.html">창고</a></li>
+								<li><a href="business/business_it.html">IT</a></li>
+								<li><a href="business/business_network_country.html">네트워크</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="intro/intro_ceo.html">회사소개</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="intro/intro_ceo.html">CEO 인사말</a></li>
+								<li><a href="intro/intro_history.html">연혁</a></li>
+								<li><a href="intro/intro_vision.html">비전</a></li>
+								<li><a href="intro/intro_pr.html">PR</a></li>
+								<li><a href="intro/intro_location.html">오시는 길</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="cs/cs_notice.html">고객지원</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="cs/cs_notice.html">공지사항</a></li>
+								<li><a href="cs/cs_news.html">뉴스/사회공헌활동</a></li>
+								<li><a href="cs/cs_partnership.html">제휴 문의</a></li>
+								<li><a href="cs/cs_pd.html">물류 문의</a></li>
+								<li><a href="cs/cs_cvms.html">고객의 소리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="invest/investment_ir.html">투자정보</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="invest/investment_ir.html">공고/IR 자료</a></li>
+								<li><a href="invest/investment_financial.html">재무 정보</a></li>
+								<li><a href="#">공시 정보</a></li>
+								<li><a href="#">주식 정보</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<ul class="gnb_recruit">
+					<li>
+						<a href="#">인재채용</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="#">채용 안내</a></li>
+								<li><a href="#">채용 공고</a></li>
+								<li><a href="#">MYPAGE</a></li>
+							</ul>	
+						</div>
+					</li>
+				</ul>
+				<a href="#" class="btn_allmenu">
+					<div>
+						<div>전체메뉴</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="gnb_bg"></div>
+	</div>
+	<!-- //header -->
+
+	<!-- mobile_menu -->
+	<div id="mHeader">
+		<h1 class="logo"><a href="index.html"><img src="images/common/logo_off.png" alt="태웅로직스" /></a></h1>
+		<a href="#" class="btn_m_menu">메뉴</a>
+	</div>
+	<div id="mGnb">
+		<ul>
+			<li>
+				<a href="business/business_marine.html">사업영역</a>
+				<div class="depth2">
+					<ul>
+						<li><a href="business/business_marine.html">해상 운송</a></li>
+						<li><a href="business/business_aivation.html">항공 운송</a></li>
+						<li><a href="business/business_cis.html">CIS/철도</a></li>
+						<li><a href="business/business_project.html">프로젝트</a></li>
+						<li><a href="business/business_consulting.html">내륙/물류 컨설팅</a></li>
+						<li><a href="business/business_multi.html">복합 운송</a></li>
+						<li><a href="business/business_warehouse.html">창고</a></li>
+						<li><a href="business/business_it.html">IT</a></li>
+						<li><a href="business/business_network_country.html">네트워크</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="intro/intro_ceo.html">회사소개</a>
+				<div class="depth2">
+					<ul>
+						<li><a href="intro/intro_ceo.html">CEO 인사말</a></li>
+						<li><a href="intro/intro_history.html">연혁</a></li>
+						<li><a href="intro/intro_vision.html">비전</a></li>
+						<li><a href="intro/intro_pr.html">PR</a></li>
+						<li><a href="intro/intro_location.html">오시는 길</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="cs/cs_notice.html">고객지원</a>
+				<div class="depth2">
+					<ul>
+						<li><a href="cs/cs_notice.html">공지사항</a></li>
+						<li><a href="cs/cs_news.html">뉴스/사회공헌활동</a></li>
+						<li><a href="cs/cs_partnership.html">제휴 문의</a></li>
+						<li><a href="cs/cs_pd.html">물류 문의</a></li>
+						<li><a href="cs/cs_cvms.html">고객의 소리</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="invest/investment_ir.html">투자정보</a>
+				<div class="depth2">
+					<ul>
+						<li><a href="invest/investment_ir.html">공고/IR 자료</a></li>
+						<li><a href="invest/investment_financial.html">재무 정보</a></li>
+						<li><a href="#">공시 정보</a></li>
+						<li><a href="#">주식 정보</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#">인재채용</a>
+				<div class="depth2">
+					<ul>
+						<li><a href="#">채용 안내</a></li>
+						<li><a href="#">채용 공고</a></li>
+						<li><a href="#">MYPAGE</a></li>
+					</ul>	
+				</div>
+			</li>
+		</ul>
+		<a href="#" class="btn_m_close">닫기</a>
+	</div>
+	<!-- //mobile_menu -->
+
+	<!-- sitemap -->
+	<div id="siteMap">
+		<div class="header_inner clearfix">
+			<h1 class="logo"><a href="index.html"><img src="images/common/logo_on.png" alt="태웅로직스" /></a></h1>
+			<div class="lang">
+				<a href="#">KO</a>
+				<ul>
+					<li><a href="#">EN</a></li>
+					<li><a href="#">CN</a></li>
+				</ul>
+			</div>
+			<div class="sitemap_list">
+				<ul class="gnb">
+					<li>
+						<a href="business/business_marine.html">사업영역</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="business/business_marine.html">해상 운송</a></li>
+								<li><a href="business/business_aivation.html">항공 운송</a></li>
+								<li><a href="business/business_cis.html">CIS/철도</a></li>
+								<li><a href="business/business_project.html">프로젝트</a></li>
+								<li><a href="business/business_consulting.html" class="sm">내륙/물류 컨설팅</a></li>
+								<li><a href="business/business_multi.html">복합 운송</a></li>
+								<li><a href="business/business_warehouse.html">창고</a></li>
+								<li><a href="business/business_it.html">IT</a></li>
+								<li><a href="business/business_network_country.html">네트워크</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="intro/intro_ceo.html">회사소개</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="intro/intro_ceo.html">CEO 인사말</a></li>
+								<li><a href="intro/intro_history.html">연혁</a></li>
+								<li><a href="intro/intro_vision.html">비전</a></li>
+								<li><a href="intro/intro_pr.html">PR</a></li>
+								<li><a href="intro/intro_location.html">오시는 길</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="cs/cs_notice.html">고객지원</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="cs/cs_notice.html">공지사항</a></li>
+								<li><a href="cs/cs_news.html" class="sm">뉴스/사회공헌활동</a></li>
+								<li><a href="cs/cs_partnership.html">제휴 문의</a></li>
+								<li><a href="cs/cs_pd.html">물류 문의</a></li>
+								<li><a href="cs/cs_cvms.html">고객의 소리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="invest/investment_ir.html">투자정보</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="invest/investment_ir.html">공고/IR 자료</a></li>
+								<li><a href="invest/investment_financial.html">재무 정보</a></li>
+								<li><a href="#">공시 정보</a></li>
+								<li><a href="#">주식 정보</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<ul class="gnb_recruit">
+					<li>
+						<a href="#">인재채용</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="#">채용 안내</a></li>
+								<li><a href="#">채용 공고</a></li>
+								<li><a href="#">MYPAGE</a></li>
+							</ul>	
+						</div>
+					</li>
+				</ul>
+				<a href="#" class="btn_allmenu active">
+					<div>
+						<div>전체메뉴</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- //sitemap -->
+
+	<!-- visual -->
+	<div id="visual">
+		<div style="background-image:url(images/main/visual.jpg);">
+			<div class="table">
+				<div class="td">
+					<h1>The Best Partner of<br>Global Company</h1>
+					<p>태웅로직스의 가치 혁신을 통한 고객만족 실현</p>	
+				</div>
+			</div>
+		</div>
+		<div style="background-image:url(images/main/visual.jpg);">
+			<div class="table">
+				<div class="td">
+					<h1>The Best Partner of<br>Global Company</h1>
+					<p>태웅로직스의 가치 혁신을 통한 고객만족 실현</p>	
+				</div>
+			</div>
+		</div>
+		<div style="background-image:url(images/main/visual.jpg);">
+			<div class="table">
+				<div class="td">
+					<h1>The Best Partner of<br>Global Company</h1>
+					<p>태웅로직스의 가치 혁신을 통한 고객만족 실현</p>	
+				</div>
+			</div>
+		</div>
+		<div style="background-image:url(images/main/visual.jpg);">
+			<div class="table">
+				<div class="td">
+					<h1>The Best Partner of<br>Global Company</h1>
+					<p>태웅로직스의 가치 혁신을 통한 고객만족 실현</p>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //visual -->
+
+	<!-- container -->
+	<div id="container" class="no-bottom">
+
+		<!-- vision_wrap -->
+		<div class="main_vision vision_wrap">
+			<div class="vision_top clearfix">
+				<div class="left">
+					<div class="ico opacityUp">
+						<h3 class="noto">Taewoong<br>Logistics</h3>
+						<h4 class="h41">고객사</h4>
+						<h4 class="h42">물류</h4>
+						<p class="txt1">운영의 노하우</p>
+						<p class="txt2">IT솔루션<br>인프라</p>
+						<p class="txt3">창고(Warehousing)</p>
+						<p class="txt4">내륙 / 해운 / 항공 운송</p>
+						<p class="txt5">수출입통관</p>
+						<p class="txt6">국내 / 해외<br>무역컨설팅</p>
+					</div>
+				</div>
+				<div class="right opacityUp delay2s">
+					<div class="table">
+						<div class="td">
+							<p>태웅로직스는</p>
+							<span>독보적인 복합운송서비스로 글로벌 물류를 선도하는<br>
+							기업을 목표로, 고객의 이익을 최우선으로 삼고, <br>
+							최적의 물류서비스를 제공합니다.<br>
+							풍부한 수출입 화물 핸들링 경험을 바탕으로 경쟁력 있는<br>
+							운임을 제공하고, 세계 각국에 해외 현지 법인과<br>
+							에이전트를 두어 유기적으로 운영되고 있습니다.</span>
+							<a href="#" class="btn_border btn_md btn_arr"><u>자세히 보기</u></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //vision_wrap -->
+
+		<!-- main_mid_slider -->
+		<div class="main_mid_slider">
+			<div class="content_inner type2">
+				<h2 class="main_title opacityUp">
+					<a href="#">사업영역</a>
+					<p>국내외 환경을 파악하고, 해상수출입 물류서비스 업무를 통합관리 함으로써, 경쟁력있는 물류서비스를 제공합니다.</p>
+				</h2>
+			</div>
+			<div class="slider_tab clearfix opacityUp">
+				<ul>
+					<li><a href="#">해상 운송</a></li>
+					<li><a href="#">항공 운송</a></li>
+					<li><a href="#">CIS &amp; 철도</a></li>
+					<li><a href="#">프로젝트</a></li>
+					<li><a href="#">내륙/물류컨설팅</a></li>
+					<li><a href="#">복합운송</a></li>
+					<li><a href="#">창고 운영</a></li>
+					<li><a href="#">IT</a></li>
+					<li><a href="#">네트워크</a></li>
+				</ul>
+			</div>
+			<div class="slider_wrap opacityUp delay2s">
+				<div class="slider">
+					<div>
+						<div style="background-image:url(images/main/main_card_slide1.jpg);">
+							<h2>해상 운송</h2>
+							<p>우즈베키스탄, 카자흐스탄, 러시아 등 주요 거점에<br>법인과 지사를 설립</p>
+						</div>
+					</div>
+					<div>
+						<div style="background-image:url(images/main/main_card_slide1.jpg);">
+							<h2>항공 운송</h2>
+							<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
+						</div>
+					</div>
+					<div>
+						<div style="background-image:url(images/main/main_card_slide1.jpg);">
+							<h2>CIS & 철도</h2>
+							<p>우즈베키스탄, 카자흐스탄, 러시아 등 주요 거점에<br>법인과 지사를 설립</p>
+						</div>
+					</div>
+					<div>
+						<div style="background-image:url(images/main/main_card_slide1.jpg);">
+							<h2>프로젝트</h2>
+							<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
+						</div>
+					</div>
+					<div>
+						<div style="background-image:url(images/main/main_card_slide1.jpg);">
+							<h2>내륙/물류컨설팅</h2>
+							<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
+						</div>
+					</div>
+					<div>
+						<div style="background-image:url(images/main/main_card_slide1.jpg);">
+							<h2>복합운송</h2>
+							<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
+						</div>
+					</div>
+					<div>
+						<div style="background-image:url(images/main/main_card_slide1.jpg);">
+							<h2>창고 운영</h2>
+							<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
+						</div>
+					</div>
+					<div>
+						<div style="background-image:url(images/main/main_card_slide1.jpg);">
+							<h2>IT</h2>
+							<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
+						</div>
+					</div>
+					<div>
+						<div style="background-image:url(images/main/main_card_slide1.jpg);">
+							<h2>네트워크</h2>
+							<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="btn_border btn_arr"><u>물류문의</u></a>
+			</div>
+		</div>
+		<!-- //main_mid_slider -->
+
+		<!-- main_broucher -->
+		<div class="main_broucher">
+			<div class="content_inner type2">
+				<div class="table">
+					<div class="td">
+						<div class="table opacityUp">
+							<div class="th">태웅로직스는</div>
+							<div class="td para">
+								3PL (third party logistics) 선두기업으로 고객의 SCM 분석을 통해<br>체계적인 국제물류 종합서비스를 제공함으로써<br>고객과 함께 성장하는최고의 물류기업 입니다.
+							</div>
+							<div class="td last">
+								<a href="#" class="btn_border btn_sm">E-브로셔 다운받기</a>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //main_broucher -->
+
+		<!-- main_shortcut -->
+		<div class="main_shortcut">
+			<div class="box_wrap clearfix">
+				<div>
+					<a href="#" class="opacityUp">
+						<h2>물류문의</h2>
+						<p>Logistics inquiry</p>
+					</a>
+				</div>
+				<div>
+					<a href="#" class="opacityUp delay2s">
+						<h2>제휴문의</h2>
+						<p>Contact us</p>
+					</a>
+				</div>
+				<div>
+					<a href="#" class="opacityUp delay4s">
+						<h2>투자정보</h2>
+						<p>Investment ihformation</p>
+					</a>
+				</div>
+			</div>
+			<p class="lg_tw">TAEWOONG</p>
+		</div>
+		<!-- //main_shortcut -->
+
+		<!-- main_news -->
+		<div class="main_news">
+			<div class="content_inner type2">
+				<h2 class="main_title opacityUp"><a href="#">뉴스/사회공헌활동</a></h2>
+
+				<!-- news_list -->
+				<div class="news_list">
+					<ol>
+						<li class="opacityUp">
+							<a href="#">
+								<div class="img" style="background-image:url(images/common/news.jpg),url(images/common/noimage.jpg);"></div>
+								<div class="content">
+									<h3>태웅로직스, 문화예술 상장 위한 장학금 전달</h3>
+									<p>동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인</p>
+									<span class="date">2019-07-09</span>
+								</div>
+							</a>
+						</li>
+						<li class="opacityUp">
+							<a href="#">
+								<div class="img" style="background-image:url(images/common/news.jpg),url(images/common/noimage.jpg);"></div>
+								<div class="content">
+									<h3>태웅로직스, 문화예술 상장 위한 장학금 전달</h3>
+									<p>동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인</p>
+									<span class="date">2019-07-09</span>
+								</div>
+							</a>
+						</li>
+						<li class="opacityUp">
+							<a href="#">
+								<div class="img" style="background-image:url(images/common/news.jpg),url(images/common/noimage.jpg);"></div>
+								<div class="content">
+									<h3>태웅로직스, 문화예술 상장 위한 장학금 전달</h3>
+									<p>동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인동유럽 합작법인</p>
+									<span class="date">2019-07-09</span>
+								</div>
+							</a>
+						</li>
+					</ol>
+				</div>
+				<!-- //news_list -->
+			</div>
+		</div>
+		<!-- //main_news -->
+
+		<!-- main_notice -->
+		<div class="main_notice">
+			<div class="skew"></div>
+			<div class="content_inner type2">
+				<h2><a href="#">공지사항</a></h2>
+				<ul class="slider">
+					<li><a href="#">전자증권 전환대상 주권 권리자(주주) 보호 및 조치사항 안내(공고)</a></li>
+					<li><a href="#">전자증권 전환대상 주권 권리자(주주) 보호 및 조치사항 안내(공고)</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- //main_notice -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="content_inner"> 
+			<div class="sponsor table">
+				<div class="td">
+					<a href="#"><img src="images/common/b_logo_aeo.png" alt="KOREA AEO"></a>
+					<a href="#"><img src="images/common/b_logo_iata.png" alt="IATA"></a>
+					<a href="#"><img src="images/common/b_logo_icr.png" alt="ICR"></a>
+					<a href="#"><img src="images/common/b_logo_anab.png" alt="ANAB"></a>
+				</div>
+			</div>
+			<div class="fl clearfix">
+				<h1 class="table"><a href="index.html" class="td"><img src="images/common/bottom_logo.png" alt="Taewoong Logistics"></a></h1>
+				<div class="address table">
+					<div class="td">
+						<address><i>주소 : 서울시 강남구 테헤란로37길 13-6, 9층(역삼동, 유니빌딩)</i> <i>전화 : 02-2029-4300   팩스 : 02-2029-4699</i></address>
+						<p class="copyright"><i>COPYRIGHT(C) 2014 TAEWOONG LOGISTICS CO.,</i> <i>LTD  ALL RIGHT RESERVED.</i></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

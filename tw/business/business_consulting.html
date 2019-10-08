@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="description" content="" />
+	<meta property="og:title" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:description" content="" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="../images/common/favicon.png">
+	<link rel="stylesheet" href="../css/slick.css" />
+	<link rel="stylesheet" href="../css/jquery-ui.css" />
+	<link rel="stylesheet" href="../css/common.css" />
+	<link rel="stylesheet" href="../css/layout.css" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/jquery-ui.js"></script>
+	<script src="../js/slick.min.js"></script>
+	<script src="../js/jquery.bpopup.min.js"></script>
+	<script src="../js/prefixfree.min.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<script src="../js/TweenMax.min.js"></script>
+	<script src="../js/common.js"></script>
+	<!--[if (gte IE 6)&(lte IE 8)]><script type="text/javascript" src="../js/selectivizr-min.js"></script><![endif]-->
+	<!--[if lt IE 9]><script src="../js/html5shiv.js"></script><![endif]-->
+	<!--[if lt IE 10]><script src="../js/placeholders.min.js"></script><![endif]-->
+	<title>TAEWOONG LOGISTICS</title>
+</head>
+<body>
+<div class="skip">
+	<a href="#gnb">주메뉴 바로가기</a>
+	<a href="#container">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<div class="header_inner">
+			<h1 class="logo"><a href="../index.html"><img src="../images/common/logo_wh.png" alt="태웅로직스" /></a></h1>
+			<div class="lang">
+				<a href="#">KO</a>
+				<ul>
+					<li><a href="#">EN</a></li>
+					<li><a href="#">CN</a></li>
+				</ul>
+			</div>
+			<div id="gnb" class="clearfix">
+				<ul class="gnb">
+					<li>
+						<a href="../business/business_marine.html">사업영역</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="../business/business_marine.html">해상 운송</a></li>
+								<li><a href="../business/business_aivation.html">항공 운송</a></li>
+								<li><a href="../business/business_cis.html">CIS/철도</a></li>
+								<li><a href="../business/business_project.html">프로젝트</a></li>
+								<li><a href="../business/business_consulting.html">내륙/물류 컨설팅</a></li>
+								<li><a href="../business/business_multi.html">복합 운송</a></li>
+								<li><a href="../business/business_warehouse.html">창고</a></li>
+								<li><a href="../business/business_it.html">IT</a></li>
+								<li><a href="../business/business_network_country.html">네트워크</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="../intro/intro_ceo.html">회사소개</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="../intro/intro_ceo.html">CEO 인사말</a></li>
+								<li><a href="../intro/intro_history.html">연혁</a></li>
+								<li><a href="../intro/intro_vision.html">비전</a></li>
+								<li><a href="../intro/intro_pr.html">PR</a></li>
+								<li><a href="../intro/intro_location.html">오시는 길</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="../cs/cs_notice.html">고객지원</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="../cs/cs_notice.html">공지사항</a></li>
+								<li><a href="../cs/cs_news.html">뉴스/사회공헌활동</a></li>
+								<li><a href="../cs/cs_partnership.html">제휴 문의</a></li>
+								<li><a href="../cs/cs_pd.html">물류 문의</a></li>
+								<li><a href="../cs/cs_cvms.html">고객의 소리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="../invest/investment_ir.html">투자정보</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="../invest/investment_ir.html">공고/IR 자료</a></li>
+								<li><a href="../invest/investment_financial.html">재무 정보</a></li>
+								<li><a href="#">공시 정보</a></li>
+								<li><a href="#">주식 정보</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<ul class="gnb_recruit">
+					<li>
+						<a href="#">인재채용</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="#">채용 안내</a></li>
+								<li><a href="#">채용 공고</a></li>
+								<li><a href="#">MYPAGE</a></li>
+							</ul>	
+						</div>
+					</li>
+				</ul>
+				<a href="#" class="btn_allmenu">
+					<div>
+						<div>전체메뉴</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="gnb_bg"></div>
+	</div>
+	<!-- //header -->
+
+	<!-- mobile_menu -->
+	<div id="mHeader">
+		<h1 class="logo"><a href="../index.html"><img src="../images/common/logo_off.png" alt="태웅로직스" /></a></h1>
+		<a href="#" class="btn_m_menu">메뉴</a>
+	</div>
+	<div id="mGnb">
+		<ul>
+			<li>
+				<a href="../business/business_marine.html">사업영역</a>
+				<div class="depth2">
+					<ul>
+						<li><a href="../business/business_marine.html">해상 운송</a></li>
+						<li><a href="../business/business_aivation.html">항공 운송</a></li>
+						<li><a href="../business/business_cis.html">CIS/철도</a></li>
+						<li><a href="../business/business_project.html">프로젝트</a></li>
+						<li><a href="../business/business_consulting.html">내륙/물류 컨설팅</a></li>
+						<li><a href="../business/business_multi.html">복합 운송</a></li>
+						<li><a href="../business/business_warehouse.html">창고</a></li>
+						<li><a href="../business/business_it.html">IT</a></li>
+						<li><a href="../business/business_network_country.html">네트워크</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="../intro/intro_ceo.html">회사소개</a>
+				<div class="depth2">
+					<ul>
+						<li><a href="../intro/intro_ceo.html">CEO 인사말</a></li>
+						<li><a href="../intro/intro_history.html">연혁</a></li>
+						<li><a href="../intro/intro_vision.html">비전</a></li>
+						<li><a href="../intro/intro_pr.html">PR</a></li>
+						<li><a href="../intro/intro_location.html">오시는 길</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="../cs/cs_notice.html">고객지원</a>
+				<div class="depth2">
+					<ul>
+						<li><a href="../cs/cs_notice.html">공지사항</a></li>
+						<li><a href="../cs/cs_news.html">뉴스/사회공헌활동</a></li>
+						<li><a href="../cs/cs_partnership.html">제휴 문의</a></li>
+						<li><a href="../cs/cs_pd.html">물류 문의</a></li>
+						<li><a href="../cs/cs_cvms.html">고객의 소리</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="../invest/investment_ir.html">투자정보</a>
+				<div class="depth2">
+					<ul>
+						<li><a href="../invest/investment_ir.html">공고/IR 자료</a></li>
+						<li><a href="../invest/investment_financial.html">재무 정보</a></li>
+						<li><a href="#">공시 정보</a></li>
+						<li><a href="#">주식 정보</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#">인재채용</a>
+				<div class="depth2">
+					<ul>
+						<li><a href="#">채용 안내</a></li>
+						<li><a href="#">채용 공고</a></li>
+						<li><a href="#">MYPAGE</a></li>
+					</ul>	
+				</div>
+			</li>
+		</ul>
+		<a href="#" class="btn_m_close">닫기</a>
+	</div>
+	<!-- //mobile_menu -->
+
+	<!-- sitemap -->
+	<div id="siteMap">
+		<div class="header_inner clearfix">
+			<h1 class="logo"><a href="../index.html"><img src="../images/common/logo_on.png" alt="태웅로직스" /></a></h1>
+			<div class="lang">
+				<a href="#">KO</a>
+				<ul>
+					<li><a href="#">EN</a></li>
+					<li><a href="#">CN</a></li>
+				</ul>
+			</div>
+			<div class="sitemap_list">
+				<ul class="gnb">
+					<li>
+						<a href="../business/business_marine.html">사업영역</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="../business/business_marine.html">해상 운송</a></li>
+								<li><a href="../business/business_aivation.html">항공 운송</a></li>
+								<li><a href="../business/business_cis.html">CIS/철도</a></li>
+								<li><a href="../business/business_project.html">프로젝트</a></li>
+								<li><a href="../business/business_consulting.html" class="sm">내륙/물류 컨설팅</a></li>
+								<li><a href="../business/business_multi.html">복합 운송</a></li>
+								<li><a href="../business/business_warehouse.html">창고</a></li>
+								<li><a href="../business/business_it.html">IT</a></li>
+								<li><a href="../business/business_network_country.html">네트워크</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="../intro/intro_ceo.html">회사소개</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="../intro/intro_ceo.html">CEO 인사말</a></li>
+								<li><a href="../intro/intro_history.html">연혁</a></li>
+								<li><a href="../intro/intro_vision.html">비전</a></li>
+								<li><a href="../intro/intro_pr.html">PR</a></li>
+								<li><a href="../intro/intro_location.html">오시는 길</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="../cs/cs_notice.html">고객지원</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="../cs/cs_notice.html">공지사항</a></li>
+								<li><a href="../cs/cs_news.html" class="sm">뉴스/사회공헌활동</a></li>
+								<li><a href="../cs/cs_partnership.html">제휴 문의</a></li>
+								<li><a href="../cs/cs_pd.html">물류 문의</a></li>
+								<li><a href="../cs/cs_cvms.html">고객의 소리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="../invest/investment_ir.html">투자정보</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="../invest/investment_ir.html">공고/IR 자료</a></li>
+								<li><a href="../invest/investment_financial.html">재무 정보</a></li>
+								<li><a href="#">공시 정보</a></li>
+								<li><a href="#">주식 정보</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<ul class="gnb_recruit">
+					<li>
+						<a href="#">인재채용</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="#">채용 안내</a></li>
+								<li><a href="#">채용 공고</a></li>
+								<li><a href="#">MYPAGE</a></li>
+							</ul>	
+						</div>
+					</li>
+				</ul>
+				<a href="#" class="btn_allmenu active">
+					<div>
+						<div>전체메뉴</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- //sitemap -->
+
+	<!-- container -->
+	<div id="container" class="no-bottom">
+
+		<!-- sub_visual -->
+		<div class="sub_visual sub01">
+			<div class="table">
+				<div class="td">
+					<h2 class="opacityUp">사업영역</h2>
+					<p class="opacityUp delay2s">BUSINESS</p>
+				</div>
+			</div>
+			<div class="visual_img"></div>
+		</div>
+		<!-- //sub_visual -->
+
+		<!-- indicator -->
+		<div id="indicator">
+			<div class="content_inner">
+				<ul>
+					<li class="home">
+						<a href="../index.html">home</a>
+					</li>
+					<li class="nodepth">
+						<a href="../business/business_marine.html">사업영역</a>
+					</li>
+					<li class="depth">
+						<a href="#" class="depth1"></a>
+						<ol class="depth2">
+							<li><a href="../business/business_marine.html">해상 운송</a></li>
+							<li><a href="../business/business_aivation.html">항공 운송</a></li>
+							<li><a href="../business/business_cis.html">CIS/철도</a></li>
+							<li><a href="../business/business_project.html">프로젝트</a></li>
+							<li><a href="../business/business_consulting.html">내륙/물류 컨설팅</a></li>
+							<li><a href="../business/business_multi.html">복합 운송</a></li>
+							<li><a href="../business/business_warehouse.html">창고</a></li>
+							<li><a href="../business/business_it.html">IT</a></li>
+							<li><a href="../business/business_network_country.html">네트워크</a></li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //indicator -->
+
+		<h2 class="page_sub_tit">내륙/물류 컨설팅</h2>
+
+		<div class="business_top consulting">
+			<div class="content_inner clearfix">
+				<div class="img motion_card" style="background-image:url(../images/sub/business_top_consulting.jpg);"></div>
+				<div class="para opacityUp">
+					<h3 class="noto">CONSULTING</h3>
+					<p>㈜태웅로직스는 일반 화물에서 부터 컨테이너, 벌크, 중량화물, 프로젝트 화물 등 Door to Door 서비스를 제공 하고 있습니다. <br>또한 해외 법인 및 현지 물류업체와의 긴밀한 파트너쉽을 통하여 고객 맞춤형 내륙 운송 서비스 제공 가능합니다.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="consulting_bg">
+			<div class="table opacityUp">
+				<div class="td">
+					<p>㈜태웅로직스는 물류 통관,보험,하역,보관까지<br> 모든 프로세스를 철저히 체크하여 시간 및 비용을 최소화 하고 있습니다.</p>
+					<a href="#" class="btn_border btn_md">물류문의</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="consulting_section step">
+			<div class="content_inner">
+				<h3 class="page_sub_tit_border thin">Turkmenistan (투르크매니스탄) 통관</h3>
+				<p><b>현대엔지니어링의 Tone Project (투르크매니스탄)를 3년간 수행한 풍부한 경험을 보유하고 있으며, <br>선적 이전부터 통관 완료 시까지 체크해야 할 사항을 철저히 체크하여 시간 및 비용을 최소화하고 있습니다.</b></p>
+
+				<ol class="top opacityUp">
+					<li class="right"><i></i><span>선적 전</span></li>
+					<li class="right"><i></i><span>이란 및 Sarakhs</span></li>
+					<li class="right"><i></i><span>현지 도착(Yolloten)</span></li>
+					<li><i></i><span>통관</span></li>
+				</ol>
+			</div>
+		</div>
+
+		<div class="consulting_section list gray_wrap">
+			<div class="content_inner">
+				<div class="dl_wrap clearfix opacityUp">
+					<dl>
+						<dt>태웅로직스</dt>
+						<dd class="arr_right">
+							<div class="table">
+								<div class="td">
+									<i class="ico">
+										<img src="images/sub/ico_consulting_sm1.png" alt="" />
+									</i>
+									<span>통관 관련 서류<br>취합/송부</span>	
+								</div>
+							</div>
+						</dd>
+						<dd class="arr_twoway">
+							<div class="table">
+								<div class="td">
+									<i class="ico">
+										<img src="images/sub/ico_consulting_sm2.png" alt="" />
+									</i>
+									<span>서류 수정</span>	
+								</div>
+							</div>
+						</dd>
+						<dd class="blank"></dd>
+						<dd class="arr_right2">
+							<div class="table">
+								<div class="td">
+									<i class="ico">
+										<img src="images/sub/ico_consulting_sm3.png" alt="" />
+									</i>
+									<span>Dustoms<br>Duty & Fee 납부</span>	
+								</div>
+							</div>
+						</dd>
+						<dd>
+							<div class="table">
+								<div class="td">
+									<i class="ico">
+										<img src="images/sub/ico_consulting_sm4.png" alt="" />
+									</i>
+									<span>Customs<br>Declaration 발급</span>	
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>Customs Broker</dt>
+						<dd class="arr_down">
+							<div class="table">
+								<div class="td">
+									<i class="ico">
+										<img src="images/sub/ico_consulting_sm5.png" alt="" />
+									</i>
+									<span>서류 검토</span>	
+								</div>
+							</div>
+						</dd>
+						<dd class="arr_down">
+							<div class="table">
+								<div class="td">
+									<i class="ico">
+										<img src="images/sub/ico_consulting_sm2.png" alt="" />
+									</i>
+									<span>서류 수정</span>	
+								</div>
+							</div>
+						</dd>
+						<dd>
+							<div class="table">
+								<div class="td">
+									<i class="ico">
+										<img src="images/sub/ico_consulting_sm6.png" alt="" />
+									</i>
+									<span>Customs<br>Declaration 신청</span>	
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>Customs</dt>
+						<dd class="blank"></dd>
+						<dd class="blank"></dd>
+						<dd class="arr_down">
+							<div class="table">
+								<div class="td">
+									<i class="ico">
+										<img src="images/sub/ico_consulting_sm7.png" alt="" />
+									</i>
+									<span>신청 접수</span>	
+								</div>
+							</div>
+						</dd>
+						<dd class="arr_down2">
+							<div class="table">
+								<div class="td">
+									<i class="ico">
+										<img src="images/sub/ico_consulting_sm8.png" alt="" />
+									</i>
+									<span>통관 진행/완료</span>	
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>통관</dt>
+						<dd class="list_dd">
+							<ul>
+								<li>화물이 투르크매니스탄 도착 전 사전 준비 사항</li>
+								<li>화물의 SITE 도착 시 준비사항</li>
+								<li>CMR (국제내륙운송) 서류 Check</li>
+								<li>통관서류 러시아어 번역 Check (통관대행사)</li>
+								<li>Guarantee Letter 작성 Check (G/L)</li>
+								<li>세관 검수 준비사항 (Customs Inspection)</li>
+								<li>ACT 작성 (통관대행사)</li>
+								<li>Gosstandard (TDS) 신청 Check</li>
+								<li>Customs Declarations</li>
+								<li>BIRJA</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<div class="consulting_section job">
+			<h3 class="page_sub_tit_border thin">Specific Job</h3>
+			<div class="content_inner clearfix">
+				<dl class="opacityUp">
+					<dt><p>통관 진행 현황 Check & Reporitng</p></dt>
+					<dd>
+						<ul>
+							<li>통관 진행 단계별 진행 현황 체크/정보 제공</li>
+							<li>Act상의 화물 통관에 대한 철저한 모니터링/관리<br>(‘Karar’라는 통관 기간 초과에 대한 패널티 있음)</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl class="opacityUp delay2s">
+					<dt><p>신속한 Customs Clearance</p></dt>
+					<dd>
+						<ul>
+							<li>체계적인 통관 서류 관리(System)</li>
+							<li>Check list에 의한 통관 서류 점검<br>(동일 아이템 가른 가격,무게 불일치, Act와 불일치)</li>
+							<li>현지 유사 프로젝트 통관 경험 업체와 제휴</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl class="opacityUp delay4s">
+					<dt><p>통관 서류 관리<span>(취합,모니터링, 필요 서류 획득 지원)</span></p></dt>
+					<dd class="clearfix">
+						<ul>
+							<li>Per-Declaration</li>
+							<li>Invoice & Packing List</li>
+							<li>CMR</li>
+							<li>Letter of Guarantee</li>
+							<li>Customs ACT</li>
+							<li>Customs Specs<br>(Cession Contact)</li>
+						</ul>
+						<ul>
+							<li>Certificate of Conformity(적합 증명서)</li>
+							<li>Import license or Authorization(필요시)</li>
+							<li>Other Certificates<br>(식품, 건강, 환적)</li>
+							<li>Birja Certificates</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+		<div class="business_bg consulting">
+			<h3 class="page_sub_tit_border white thin">Uzbekistan 통관</h3>
+			<div class="content_inner">
+				<div class="table_wrap clearfix">
+					<div class="opacityUp">
+						<table>
+							<tbody>
+								<tr>
+									<th scope="row">IMPORT 70 REGIME</th>
+									<td>수입 최초의 보세 구역 입고 시 절차</td>
+								</tr>
+								<tr>
+									<th scope="row">IMPORT 40 REGIME</th>
+									<td>일반 수입 (정상적인 관세, 부가세 지불)</td>
+								</tr>
+								<tr>
+									<th scope="row">IMPORT 42 REGIME</th>	
+									<td>재 반출 조건 통관</td>
+								</tr>
+								<tr>
+									<th scope="row">IMPORT 74 REGIME</th>
+									<td>보세 구역 외 입고 시 절차</td>
+								</tr>
+								<tr>
+									<th scope="row">EXPORT 10 REGIME</th>
+									<td>일반 수출</td>
+								</tr>
+								<tr>
+									<th scope="row">RE EXPORT 11 REGIME</th>
+									<td>반출 조건의 수출</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="opacityUp delay2s">
+						<table>
+							<tbody>
+								<tr>
+									<th scope="row">PHYTOSANITARY</th>
+									<td>위생 증명서, 식물 종류관련</td>
+								</tr>
+								<tr>
+									<th scope="row">VETERINARY</th>
+									<td>수의 증명서, 가축,생선종류 관련</td>
+								</tr>
+								<tr>
+									<th scope="row">SANITARY-HYGIENIC</th>	
+									<td>위생증명서,  피부/신체부분등에 영향을 미치는 종류 제품</td>
+								</tr>
+								<tr>
+									<th scope="row">QUARANTINE</th>
+									<td>검역 증명서</td>
+								</tr>
+								<tr>
+									<th scope="row">ECLOGICAL</th>
+									<td>환경</td>
+								</tr>
+								<tr>
+									<th scope="row">OZONE</th>
+									<td>환경</td>
+								</tr>
+								<tr>
+									<th scope="row">ORIGIN</th>
+									<td>원산지 증명서<span>(없을 경우에 관세 2배로 지불)</span></td>
+								</tr>
+								<tr>
+									<th scope="row">GOST (CONFORMITY) </th>
+									<td>제품의 품질,안전 및 적합성 관련</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="business_case consulting">
+			<div class="content_inner">
+				<h3 class="page_sub_tit_border thin">프로젝트 통관 수행 현황</h3>
+				<ul class="case_list">
+					<li class="opacityUp">
+						<a href="#">
+							<div class="img_wrap">
+								<div class="img" style="background-image:url(images/sub/consulting_case1.jpg);"></div>
+								<div class="table">
+									<div class="td">2012년 Uzbekistan UGCC Project</div>
+								</div>
+							</div>
+							<ul>
+								<li>가스전 개발 및 석유화학 플랜트 건설 (아랄해 인근 수르길 지역)<br>공사비 40억불</li>
+								<li>EPC (Engineering Procurement and Construction)
+									<ul class="sub">
+										<li>- 현대엔지니어링, 삼성엔지니어링, GS건설<br><span>발주처 : Uz – Kor Gas Chemical LLC</span></li>
+									</ul>
+								</li>
+							</ul>
+						</a>
+					</li>
+					<li class="opacityUp delay2s">
+						<a href="#">
+							<div class="img_wrap">
+								<div class="img" style="background-image:url(images/sub/consulting_case2.jpg);"></div>
+								<div class="table">
+									<div class="td">2010년 Turkmenistan Tone project</div>
+								</div>
+							</div>
+							<ul>
+								<li>탈황설비 프로젝트 (투르크매니스탄 욜로텐 지역)<br>공사비 14.8억불</li>
+								<li>EPC (Engineering Procurement and Construction)
+									<ul class="sub">
+										<li>- 현대엔지니어링<br><span>발주처 : 투르크매니스탄 국영 가스회사인 ‘투르크멘가스</span></li>
+									</ul>
+								</li>
+							</ul>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- business_bottom -->
+		<div class="gray_wrap business_bottom">
+			<div class="content_inner">
+				<div class="box_wrap">
+					<div class="box opacityUp">
+						<a href="../cs/cs_partnership.html">
+							<div class="table">
+								<div class="th">
+									<img src="images/sub/ico_question.png" alt="" />
+								</div>
+								<div class="td">
+									<p>제휴 문의</p>
+									<span>태웅로직스는 신뢰와 믿음으로 <br>진정한 파트너 관계를 구축합니다.</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="box opacityUp delay2s">
+						<a href="../cs/cs_pd.html">
+							<div class="table">
+								<div class="th">
+									<img src="images/sub/ico_truck.png" alt="" />
+								</div>
+								<div class="td">
+									<p>물류 문의</p>
+									<span>태웅로직스만의 독사적인 시스템으로<br>안전하고 전문적인 물류 서비스를 제공합니다.</span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //business_bottom -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="content_inner"> 
+			<div class="sponsor table">
+				<div class="td">
+					<a href="#"><img src="../images/common/b_logo_aeo.png" alt="KOREA AEO"></a>
+					<a href="#"><img src="../images/common/b_logo_iata.png" alt="IATA"></a>
+					<a href="#"><img src="../images/common/b_logo_icr.png" alt="ICR"></a>
+					<a href="#"><img src="../images/common/b_logo_anab.png" alt="ANAB"></a>
+				</div>
+			</div>
+			<div class="fl clearfix">
+				<h1 class="table"><a href="../index.html" class="td"><img src="../images/common/bottom_logo.png" alt="Taewoong Logistics"></a></h1>
+				<div class="address table">
+					<div class="td">
+						<address><i>주소 : 서울시 강남구 테헤란로37길 13-6, 9층(역삼동, 유니빌딩)</i> <i>전화 : 02-2029-4300   팩스 : 02-2029-4699</i></address>
+						<p class="copyright"><i>COPYRIGHT(C) 2014 TAEWOONG LOGISTICS CO.,</i> <i>LTD  ALL RIGHT RESERVED.</i></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+</div>
+
+</body>
+</html>
