@@ -158,7 +158,7 @@ App.main = {
         $(".main_mid_slider .slider").on('init', function(){
 			$(".main_mid_slider .slider_tab li").eq(0).addClass("active");
 		}).on("beforeChange", function(event, slick, currentSlide,nextSlide){
-			
+
         }).on("afterChange", function(event, slick, currentSlide,nextSlide){
         	$(".main_mid_slider .slider_tab li").removeClass("active");
 			$(".main_mid_slider .slider_tab li").eq(currentSlide).addClass("active");
