@@ -85,7 +85,7 @@ App = {
 		    $("body").addClass("ios");
 		}
 	},is_mobile(){
-	    return (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera);
+		return /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 	}
 }
 
@@ -161,9 +161,8 @@ App.main = {
         $(".main_mid_slider .slider").on('init', function(){
 			$(".main_mid_slider .slider_tab li").eq(0).addClass("active");
 		}).on("beforeChange", function(event, slick, currentSlide,nextSlide){
-			console.log($(slick.$slides[currentSlide]).find(">div"));
+			
         }).on("afterChange", function(event, slick, currentSlide,nextSlide){
-        	$(".main_mid_slider .slider .slick-slide").removeClass("current");
         	$(".main_mid_slider .slider_tab li").removeClass("active");
 			$(".main_mid_slider .slider_tab li").eq(currentSlide).addClass("active");
         }).slick({
