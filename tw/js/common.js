@@ -454,8 +454,8 @@ App.main = {
 		});
 
 		/*팝업닫기*/
-		$(document).on("click",'.bg, .btn_close, .btn_m_close',function(e){
-			e.preventDefault();
+		$(document).on("click touch",'.bg, .btn_close, .btn_m_close',function(event){
+			event.preventDefault();
 			$('.popup').hide();
 			$('.bg').fadeOut().remove();
 			$("a[data-focus~=on]").focus(); // 표시해둔 곳으로 초점 이동
