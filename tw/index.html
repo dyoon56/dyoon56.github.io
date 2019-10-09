@@ -38,29 +38,7 @@
 </div>
 
 <!-- 팝업 -->
-<script>
-	$(function(){
-		
-
-		// $(".popup .btn_close").click(function(e){
-		// 	e.preventDefault();
-
-		// 	if($(".btn_layer_chk").hasClass("on")){
-		// 		setCookie( "maindiv", "done" , 1 );
-		// 		document.all['layerPopup'].style.display = "none";
-		// 	}else{
-		// 		document.all['layerPopup'].style.display = "none";
-		// 	}
-		// });
-	});
-	// function setCookie( name, value, expiredays ) {
-	// 	var todayDate = new Date();
-	// 	todayDate.setDate( todayDate.getDate() + expiredays ); 
-	// 	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-	// }
-</script>
-
-<div id="layerPopup" class="popup popLayout" tabindex="0">
+<!-- <div id="layerPopup" class="popup popLayout" tabindex="0">
     <form name="pop_form">
 		<div class="pop_top">
 			<h1>태웅로직스</h1>
@@ -76,7 +54,6 @@
 			포장 작업에 많은 시간이 소요되어 출고가 지연되고있습니다.</p>
 		</div>
 		<div class="layer_bottom">
-			<!-- <a href="#" class="btn_layer_chk">다시보지않기</a> -->
 			<div class="chk_box">
 				<input type="checkbox" name="chkDone" id="chkDone" title="오늘 다시 보지 않기" />
 				<label for="chkDone">
@@ -86,27 +63,9 @@
 		</div>
 		<a href="javascript:closeLayer();" class="close">닫기</a>
 	</form>
-</div>
+</div> -->
 
 <script>
-    // cookiedata = document.cookie;
-
-    // if ( cookiedata.indexOf("maindiv=done") < 0 ){     
-    // 	console.log(cookiedata)
-    //     document.all['layerPopup'].style.display = "block";
-    // }
-    // else {
-    // 	console.log(cookiedata)
-    //     document.all['layerPopup'].style.display = "none";
-    // }
-
-    // 다시보지않기 체크
- //    $(".btn_layer_chk").click(function(e){
-	// 	e.preventDefault();
-	// 	$(this).toggleClass("on");
-	// });
-
-	console.log(getCookie("layerPopup"))
     if(getCookie("layerPopup") != "done" ){
         $("#layerPopup").show();
     }
@@ -301,6 +260,11 @@
 					</ul>	
 				</div>
 			</li>
+			<li class="bottom_logo">
+				<a href="index.html">
+					<img src="images/common/logo_m.png" width="116" alt="TAEWOONG LOGISTICS" />
+				</a>
+			</li>
 		</ul>
 		<a href="#" class="btn_m_close">닫기</a>
 	</div>
@@ -395,7 +359,8 @@
 
 	<!-- visual -->
 	<div id="visual">
-		<div style="background-image:url(images/main/visual.jpg);">
+		<div>
+			<div class="img" style="background-image:url(images/main/visual.jpg);"></div>
 			<div class="table">
 				<div class="td">
 					<h1>The Best Partner of<br>Global Company</h1>
@@ -403,7 +368,8 @@
 				</div>
 			</div>
 		</div>
-		<div style="background-image:url(images/main/visual.jpg);">
+		<div>
+			<div class="img" style="background-image:url(images/main/visual.jpg);"></div>
 			<div class="table">
 				<div class="td">
 					<h1>The Best Partner of<br>Global Company</h1>
@@ -411,7 +377,8 @@
 				</div>
 			</div>
 		</div>
-		<div style="background-image:url(images/main/visual.jpg);">
+		<div>
+			<div class="img" style="background-image:url(images/main/visual.jpg);"></div>
 			<div class="table">
 				<div class="td">
 					<h1>The Best Partner of<br>Global Company</h1>
@@ -419,7 +386,8 @@
 				</div>
 			</div>
 		</div>
-		<div style="background-image:url(images/main/visual.jpg);">
+		<div>
+			<div class="img" style="background-image:url(images/main/visual.jpg);"></div>
 			<div class="table">
 				<div class="td">
 					<h1>The Best Partner of<br>Global Company</h1>
@@ -436,19 +404,6 @@
 		<!-- vision_wrap -->
 		<div class="main_vision vision_wrap">
 			<div class="vision_top clearfix">
-				<div class="left">
-					<div class="ico opacityUp">
-						<h3 class="noto">Taewoong<br>Logistics</h3>
-						<h4 class="h41">고객사</h4>
-						<h4 class="h42">물류</h4>
-						<p class="txt1">운영의 노하우</p>
-						<p class="txt2">IT솔루션<br>인프라</p>
-						<p class="txt3">창고(Warehousing)</p>
-						<p class="txt4">내륙 / 해운 / 항공 운송</p>
-						<p class="txt5">수출입통관</p>
-						<p class="txt6">국내 / 해외<br>무역컨설팅</p>
-					</div>
-				</div>
 				<div class="right opacityUp delay2s">
 					<div class="table">
 						<div class="td">
@@ -463,92 +418,22 @@
 						</div>
 					</div>
 				</div>
+				<div class="left">
+					<div class="ico opacityUp">
+						<h3 class="noto">Taewoong<br>Logistics</h3>
+						<h4 class="h41">고객사</h4>
+						<h4 class="h42">물류</h4>
+						<p class="txt1">운영의 노하우</p>
+						<p class="txt2">IT솔루션<br>인프라</p>
+						<p class="txt3">창고(Warehousing)</p>
+						<p class="txt4">내륙 / 해운 / 항공 운송</p>
+						<p class="txt5">수출입통관</p>
+						<p class="txt6">국내 / 해외<br>무역컨설팅</p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- //vision_wrap -->
-
-		<!-- main_mid_slider -->
-		<div class="main_mid_slider">
-			<div class="content_inner type2">
-				<h2 class="main_title opacityUp">
-					<a href="#">사업영역</a>
-					<p>국내외 환경을 파악하고, 해상수출입 물류서비스 업무를 통합관리 함으로써, 경쟁력있는 물류서비스를 제공합니다.</p>
-				</h2>
-			</div>
-			<div class="slider_tab clearfix opacityUp">
-				<ul>
-					<li><a href="#">해상 운송</a></li>
-					<li><a href="#">항공 운송</a></li>
-					<li><a href="#">CIS &amp; 철도</a></li>
-					<li><a href="#">프로젝트</a></li>
-					<li><a href="#">내륙/물류컨설팅</a></li>
-					<li><a href="#">복합운송</a></li>
-					<li><a href="#">창고 운영</a></li>
-					<li><a href="#">IT</a></li>
-					<li><a href="#">네트워크</a></li>
-				</ul>
-			</div>
-			<div class="slider_wrap opacityUp delay2s">
-				<div class="slider">
-					<div>
-						<div style="background-image:url(images/main/main_card_slide1.jpg);">
-							<h2>해상 운송</h2>
-							<p>우즈베키스탄, 카자흐스탄, 러시아 등 주요 거점에<br>법인과 지사를 설립</p>
-						</div>
-					</div>
-					<div>
-						<div style="background-image:url(images/main/main_card_slide1.jpg);">
-							<h2>항공 운송</h2>
-							<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
-						</div>
-					</div>
-					<div>
-						<div style="background-image:url(images/main/main_card_slide1.jpg);">
-							<h2>CIS & 철도</h2>
-							<p>우즈베키스탄, 카자흐스탄, 러시아 등 주요 거점에<br>법인과 지사를 설립</p>
-						</div>
-					</div>
-					<div>
-						<div style="background-image:url(images/main/main_card_slide1.jpg);">
-							<h2>프로젝트</h2>
-							<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
-						</div>
-					</div>
-					<div>
-						<div style="background-image:url(images/main/main_card_slide1.jpg);">
-							<h2>내륙/물류컨설팅</h2>
-							<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
-						</div>
-					</div>
-					<div>
-						<div style="background-image:url(images/main/main_card_slide1.jpg);">
-							<h2>복합운송</h2>
-							<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
-						</div>
-					</div>
-					<div>
-						<div style="background-image:url(images/main/main_card_slide1.jpg);">
-							<h2>창고 운영</h2>
-							<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
-						</div>
-					</div>
-					<div>
-						<div style="background-image:url(images/main/main_card_slide1.jpg);">
-							<h2>IT</h2>
-							<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
-						</div>
-					</div>
-					<div>
-						<div style="background-image:url(images/main/main_card_slide1.jpg);">
-							<h2>네트워크</h2>
-							<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
-						</div>
-					</div>
-				</div>
-				<a href="#" class="btn_border btn_arr"><u>물류문의</u></a>
-			</div>
-		</div>
-		<!-- //main_mid_slider -->
 
 		<!-- main_broucher -->
 		<div class="main_broucher">
@@ -570,23 +455,126 @@
 		</div>
 		<!-- //main_broucher -->
 
+		<!-- main_mid_slider -->
+		<div class="main_mid_slider">
+			<div class="content_inner type2">
+				<h2 class="main_title opacityUp">
+					<a href="#">사업영역</a>
+					<p>국내외 환경을 파악하고, 해상수출입 물류서비스 업무를 통합관리 함으로써, 경쟁력있는 물류서비스를 제공합니다.</p>
+				</h2>
+			</div>
+			<div class="clearfix">
+				<div class="slider_tab clearfix opacityUp">
+					<ul>
+						<li><a href="#">해상 운송</a></li>
+						<li><a href="#">항공 운송</a></li>
+						<li><a href="#">CIS &amp; 철도</a></li>
+						<li><a href="#">프로젝트</a></li>
+						<li><a href="#">내륙/물류컨설팅</a></li>
+						<li><a href="#">복합운송</a></li>
+						<li><a href="#">창고 운영</a></li>
+						<li><a href="#">IT</a></li>
+						<li><a href="#">네트워크</a></li>
+					</ul>
+				</div>
+				<div class="slider_wrap opacityUp delay2s">
+					<div class="slider">
+						<div>
+							<div style="background-image:url(images/main/main_card_slide1.jpg);">
+								<div class="para">
+									<h2>해상 운송</h2>
+									<p>우즈베키스탄, 카자흐스탄, 러시아 등 주요 거점에<br>법인과 지사를 설립</p>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div style="background-image:url(images/main/main_card_slide1.jpg);">
+								<div class="para">
+									<h2>항공 운송</h2>
+									<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div style="background-image:url(images/main/main_card_slide1.jpg);">
+								<div class="para">
+									<h2>CIS & 철도</h2>
+									<p>우즈베키스탄, 카자흐스탄, 러시아 등 주요 거점에<br>법인과 지사를 설립</p>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div style="background-image:url(images/main/main_card_slide1.jpg);">
+								<div class="para">
+									<h2>프로젝트</h2>
+									<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div style="background-image:url(images/main/main_card_slide1.jpg);">
+								<div class="para">
+									<h2>내륙/물류컨설팅</h2>
+									<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div style="background-image:url(images/main/main_card_slide1.jpg);">
+								<div class="para">
+									<h2>복합운송</h2>
+									<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div style="background-image:url(images/main/main_card_slide1.jpg);">
+								<div class="para">
+									<h2>창고 운영</h2>
+									<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div style="background-image:url(images/main/main_card_slide1.jpg);">
+								<div class="para">
+									<h2>IT</h2>
+									<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div style="background-image:url(images/main/main_card_slide1.jpg);">
+								<div class="para">
+									<h2>네트워크</h2>
+									<p>프로젝트성 특수 화무을 취급하는 고객사들을<br>위해서 부산에서 보세창고 및 창고를 운영</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="cs/cs_pd.html" class="btn_border btn_arr"><u>물류문의</u></a>
+				</div>
+			</div>
+		</div>
+		<!-- //main_mid_slider -->
+
 		<!-- main_shortcut -->
 		<div class="main_shortcut">
 			<div class="box_wrap clearfix">
 				<div>
-					<a href="#" class="opacityUp">
+					<a href="cs/cs_pd.html" class="opacityUp">
 						<h2>물류문의</h2>
 						<p>Logistics inquiry</p>
 					</a>
 				</div>
 				<div>
-					<a href="#" class="opacityUp delay2s">
+					<a href="cs/cs_partnership.html" class="opacityUp delay2s">
 						<h2>제휴문의</h2>
 						<p>Contact us</p>
 					</a>
 				</div>
 				<div>
-					<a href="#" class="opacityUp delay4s">
+					<a href="invest/investment_financial.html" class="opacityUp delay4s">
 						<h2>투자정보</h2>
 						<p>Investment ihformation</p>
 					</a>
@@ -599,12 +587,13 @@
 		<!-- main_news -->
 		<div class="main_news">
 			<div class="content_inner type2">
-				<h2 class="main_title opacityUp"><a href="#">뉴스/사회공헌활동</a></h2>
+				<h2 class="main_title opacityUp"><a href="cs/cs_news.html">뉴스/사회공헌활동</a></h2>
 
 				<!-- news_list -->
-				<div class="news_list">
+				<div class="news_list opacityUp">
 					<ol>
-						<li class="opacityUp">
+						<!-- 최대 3개까지 노출 -->
+						<li>
 							<a href="#">
 								<div class="img" style="background-image:url(images/common/news.jpg),url(images/common/noimage.jpg);"></div>
 								<div class="content">
@@ -614,7 +603,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="opacityUp">
+						<li>
 							<a href="#">
 								<div class="img" style="background-image:url(images/common/news.jpg),url(images/common/noimage.jpg);"></div>
 								<div class="content">
@@ -624,7 +613,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="opacityUp">
+						<li>
 							<a href="#">
 								<div class="img" style="background-image:url(images/common/news.jpg),url(images/common/noimage.jpg);"></div>
 								<div class="content">
@@ -645,7 +634,7 @@
 		<div class="main_notice">
 			<div class="skew"></div>
 			<div class="content_inner type2">
-				<h2><a href="#">공지사항</a></h2>
+				<h2><a href="cs/cs_notice.html">공지사항</a></h2>
 				<ul class="slider">
 					<li><a href="#">전자증권 전환대상 주권 권리자(주주) 보호 및 조치사항 안내(공고)</a></li>
 					<li><a href="#">전자증권 전환대상 주권 권리자(주주) 보호 및 조치사항 안내(공고)</a></li>
@@ -662,10 +651,10 @@
 		<div class="content_inner"> 
 			<div class="sponsor table">
 				<div class="td">
-					<a href="#"><img src="images/common/b_logo_aeo.png" alt="KOREA AEO"></a>
-					<a href="#"><img src="images/common/b_logo_iata.png" alt="IATA"></a>
-					<a href="#"><img src="images/common/b_logo_icr.png" alt="ICR"></a>
-					<a href="#"><img src="images/common/b_logo_anab.png" alt="ANAB"></a>
+					<a href="#" target="_blank" title="새창열기"><img src="images/common/b_logo_aeo.png" alt="KOREA AEO"></a>
+					<a href="#" target="_blank" title="새창열기"><img src="images/common/b_logo_iata.png" alt="IATA"></a>
+					<a href="#" target="_blank" title="새창열기"><img src="images/common/b_logo_icr.png" alt="ICR"></a>
+					<a href="#" target="_blank" title="새창열기"><img src="images/common/b_logo_anab.png" alt="ANAB"></a>
 				</div>
 			</div>
 			<div class="fl clearfix">

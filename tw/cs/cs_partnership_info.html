@@ -193,6 +193,11 @@
 					</ul>	
 				</div>
 			</li>
+			<li class="bottom_logo">
+				<a href="../index.html">
+					<img src="../images/common/logo_m.png" width="116" alt="TAEWOONG LOGISTICS" />
+				</a>
+			</li>
 		</ul>
 		<a href="#" class="btn_m_close">닫기</a>
 	</div>
@@ -328,44 +333,173 @@
 		<h2 class="page_sub_tit">제휴 문의</h2>
 
 		<ul class="tab_page partnership">
-			<li class="active"><a href="../cs/cs_partnership_info.html">제휴 안내</a></li>
-			<li><a href="../cs/cs_partnership.html">제휴 신청</a></li>
+			<li><a href="../cs/cs_partnership.html">제휴 안내</a></li>
+			<li class="active"><a href="../cs/cs_partnership_info.html">제휴 신청</a></li>
 		</ul>
 
-		<!-- partnership_info_wrap -->
-		<div class="partnership_info_wrap">
+		<!-- partnership_app_wrap -->
+		<div class="partnership_app_wrap">
 			<div class="content_inner">
-				<div class="img fl motion_card">
-					<img src="../images/sub/partnership_img.jpg" alt="" />
+				<h3 class="frm_title"><span>Step.1</span> 개인정보입력</h3>
+				<div class="frm_basic">
+					<table>
+						<tbody>
+							<tr>
+								<th>
+									<label for="iName">이름</label>
+								</th>
+								<td>
+									<input type="text" id="iName">
+								</td>
+								<th>
+									<label for="iPosition">직책</label>
+								</th>
+								<td>
+									<input type="text" id="iPosition">
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="iCompany">회사명</label>
+								</th>
+								<td>
+									<input type="text" id="iCompany">
+								</td>
+								<th>
+									<label for="iHomapage">홈페이지</label>
+								</th>
+								<td>
+									<input type="text" id="iHomapage">
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="iNumber">전화번호</label>
+								</th>
+								<td>
+									<input type="text" id="iNumber">
+								</td>
+								<th>
+									<label for="iMail">이메일</label>
+								</th>
+								<td>
+									<input type="text" id="iMail">
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="iTitle">제목</label>
+								</th> 
+								<td colspan="3">
+									<input type="text" id="iTitle">
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="iAddress">회사주소</label>
+								</th>
+								<td colspan="3">
+									<div class="address_wrap">
+										<div class="line1 clearfix">
+											<input type="text" id="iAddress" readonly="readonly" />
+											<a href="#">우편번호</a>
+										</div>
+										<input type="text" readonly="readonly" />
+										<input type="text" />
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-				<div class="para fl opacityUp">
-					<p>Partnership Program에 관심을 가져주신 것에 대해 감사의 말씀 드립니다. <br>
-					보다 진취적이고 다양한 도전을 준비하시는 여러분들의 많은 관심을 부탁드리며, 제휴 신청 양식의 내용을 기입하신 후 신청서를 보내주시기 바랍니다</p>
-					<h3>업체 분야</h3>
-					<ul>
-						<li>
-							<b>국내 운송 업체 : </b>
-							<span>일반 화물 운송업체, 보세 운송업체, 컨테이너  운송업체, 특수 화물 운송 업체, 택배업체 등</span>
-						</li>
-						<li>
-							<b>국제 운송 업체 : </b>
-							<span>선사, 항공사, 국제 특소업체, Freight Forwarder</span>
-						</li>
-						<li>
-							<b>창고 업체</b>
-						</li>
-						<li>
-							<b>물류 장비 / 기기 업체</b>
-						</li>
-						<li>
-							<b>물류 및 SCM 시스템 / 솔루션 업체</b>
-						</li>
-					</ul>
-					<a href="../cs/cs_partnership.html">제휴 신청</a>
+				<h3 class="frm_title second"><span>Step.2</span> 기업정보입력</h3>
+				<div class="frm_basic">
+					<table>
+						<tbody>
+							<tr>
+								<th>
+									<label for="iDate">설립년월</label>
+								</th>
+								<td>
+									<input type="text" id="iDate" class="datepicker" placeholder="YYYY-MM">
+								</td>
+								<th>
+									<label for="iWorker">종업원수</label>
+								</th>
+								<td class="td_worker">
+									<input type="text" id="iWorker">
+									<span>명</span>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="iBusiness">업종</label>
+								</th>
+								<td>
+									<select name="" id="iBusiness">
+										<option value="">업종 선택</option>
+										<option value="">업종종류1</option>
+										<option value="">업종종류2</option>
+										<option value="">업종종류3</option>
+									</select>
+								</td>
+								<th>
+									<label for="iItem">취급Item</label>
+								</th>
+								<td>
+									<select name="" id="iItem">
+										<option value="">취급Item 선택</option>
+										<option value="">취급Item 종류1</option>
+										<option value="">취급Item 종류2</option>
+										<option value="">취급Item 종류3</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="iSales">연매출액</label>
+								</th>
+								<td>
+									<select name="" id="iSales">
+										<option value="">매출액 선택</option>
+										<option value="">매출액 종류1</option>
+										<option value="">매출액 종류2</option>
+										<option value="">매출액 종류3</option>
+									</select>
+								</td>
+								<th>&nbsp;</th>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="iContent">구축<br>주요목적</label>
+								</th>
+								<td colspan="3">
+									<textarea id="iContent"></textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="box_guide">
+						<div>
+							개인정보 취급 방침 내용
+						</div>
+					</div>
+					<div class="text-left mgt10">
+						<div class="checkbox custom">
+							<input type="checkbox" id="agree" class="css-checkbox">
+							<label for="agree" class="css-label">
+								<span>개인정보 취급 방침 동의</span>
+							</label>
+						</div>
+					</div>
+					<div class="text-center mgt50">
+						<a href="#popComplete" rel='modal:open' class="btn_md btn_red">문의하기</a>
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- //partnership_info_wrap -->
+		<!-- //partnership_app_wrap -->
 
 	</div>
 	<!-- //container -->
@@ -393,6 +527,15 @@
 		</div>
 	</div>
 	<!-- //footer -->
+</div>
+<!-- 문의완료 팝업 -->
+<div class="popup" id="popComplete">
+	<div class="text-center">
+		<p>문의가 완료 되었습니다.<br />
+		빠른 시일 내에 연락드리도록 하겠습니다. <br />
+		감사합니다.</p>
+	</div>
+	<a href="#" class="btn_close btn_md btn_red">닫기</a>
 </div>
 </body>
 </html>

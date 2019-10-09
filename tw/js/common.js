@@ -89,6 +89,8 @@ App = {
 $.namespace("App.main");
 App.main = {
 	init : function(){
+		w_h = window.innerWidth;
+
 		App.main.gnb();
 		App.main.setSwipe();
 		App.main.bindEvent();
@@ -100,6 +102,10 @@ App.main = {
 		App.main.popup();
 		App.main.motionEvent();
 
+		if (w_h > 767) {
+			App.main.currnetMenu();
+		}
+
 		$("#wrap").addClass("loaded");
 		$(".sub_visual h2,.sub_visual p").addClass("active");
 
@@ -109,7 +115,7 @@ App.main = {
 
 		sct = $(window).scrollTop();
 			
-		$(".opacityUp, [class^='page_sub_tit'], [class^='page_sub_tit'] + p,.title_border").each(function(){
+		$(".opacityUp, [class^='page_sub_tit'], [class^='page_sub_tit'] + p,[class^='page_sub_tit'] + p + p,.title_border").each(function(){
 			var tgTop = $(this).offset().top  - $(window).height();
 			if(sct > tgTop){
 				$(this).addClass("active");
@@ -130,7 +136,11 @@ App.main = {
 		if (mainSlider_len > 1) {
 			$('#visual').on('init', function(){
 				$(this).append('<button id="mainSliderBtn">자동재생/멈춤</button>');
-			}).slick({
+				$("#visual .slick-slide").eq(0).addClass("active-item");
+			}).on("beforeChange", function(event, slick, currentSlide, nextSlide){
+	        	$("#visual .slick-slide").removeClass("active-item");
+				$(this).find(".slick-slide").eq(nextSlide).addClass("active-item");
+	        }).slick({
                 fade:true,
 				dots:true,
 				infinite: true,
@@ -138,8 +148,6 @@ App.main = {
                 slidesToScroll: 1,
 				arrows:true,
 				autoplay: true,
-	  			autoplaySpeed: 2000,
-	  			speed:1500
             });
 		}
 
@@ -167,6 +175,24 @@ App.main = {
 			slidesToScroll: 1,
 			arrows: true,
 			speed: 400,
+			responsive: [
+			{
+			  breakpoint: 1200,
+			  settings: {
+			    slidesToShow: 1,
+			    slidesToScroll: 1
+			  }
+			},{
+			  breakpoint:992,
+			  settings: {
+			  	fade:true,
+			    slidesToShow: 1,
+			    slidesToScroll: 1,
+			    arrows:false,
+			    speed:1000
+			  }
+			}
+			]
         });
 
 
@@ -179,6 +205,29 @@ App.main = {
         	var slideno = $(this).index();
 
 			$(".main_mid_slider .slider").slick('slickGoTo', slideno);
+        });
+
+        // 메인 뉴스리스트
+        $(".main_news .news_list ol").slick({
+        	slidesToShow:3,
+        	slidesToScroll:1,
+			infinite: true,
+			arrows:false,
+			responsive: [
+				{
+				  breakpoint: 1200,
+				  settings: {
+				    slidesToShow:2
+				  }
+				},
+				{
+				  breakpoint: 576,
+				  settings: {
+				    slidesToShow:1,
+				    arrows:true
+				  }
+				}
+			]
         });
 
 		// 메인 공지사항
@@ -208,6 +257,7 @@ App.main = {
 			img.attr("src", img.attr("src").replace("_on", "_wh"));
 			$("#gnb .depth2").hide();
 			$(".gnb_bg").hide();
+			App.main.currnetMenu();
 		});
 
 		$("#gnb > ul > li").on("mouseenter focusin",function(){
@@ -219,6 +269,7 @@ App.main = {
 		$("#gnb > ul > li").on("mouseleave blur",function(){			
 			$(this).find(".depth2").hide();
 			$(".gnb_bg").hide();
+			App.main.currnetMenu();
 		});
 
 		$("#header .btn_allmenu").click(function(e){
@@ -237,6 +288,7 @@ App.main = {
 			}, 400);
 		});
 
+		// 모바일
 		$("#mHeader .btn_m_menu").click(function(e){
 			e.preventDefault();
 
@@ -248,7 +300,6 @@ App.main = {
 				$("#mGnb .btn_m_close").show();
 			});
 		});
-
 		$("#mGnb > ul > li > a").click(function(e){
 			e.preventDefault();
 
@@ -269,17 +320,27 @@ App.main = {
 			}
 		});
 
+		// 다국어 선택
 		$(".lang").click(function(e){
 			e.preventDefault();
 
 			$(this).toggleClass("active");
 			$(this).find("ul").slideToggle();
 		});
-
 		$(".lang ul").click(function(e){
 			e.stopPropagation();
 		});
-
+	},
+	currnetMenu:function(){
+		// current menu active
+		$("#gnb .depth2 li").each(function(){
+			if($(this).find("a").text() == $("h2.page_sub_tit").text()){
+				$(this).addClass("active");
+				$(this).parents("li").addClass("active");
+				$(this).parents(".depth2").show();
+				$(".gnb_bg").show();
+			}
+		});
 	},
 	bindEvent : function(){
 		$(".tab li").length && $(".tab li").tabMethod();
@@ -294,14 +355,13 @@ App.main = {
             ,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 부분 텍스트
             ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 부분 Tooltip 텍스트
             ,minDate: "-1M" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
-            ,maxDate: "+1M" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)
 		});
 	},
 	scrollEvent : function(){
 		$(window).scroll(function(){
 			sct = $(window).scrollTop();
 			
-			$(".opacityUp, [class^='page_sub_tit'], [class^='page_sub_tit'] + p, .title_border").each(function(){
+			$(".opacityUp, [class^='page_sub_tit'], [class^='page_sub_tit'] + p ,[class^='page_sub_tit'] + p + p, .title_border").each(function(){
 				var tgTop = $(this).offset().top  - $(window).height();
 				if(sct > tgTop){
 					$(this).addClass("active");
@@ -318,6 +378,13 @@ App.main = {
 	},
 	resizeEvent : function(){
 
+		$(window).resize(function(){
+			w_h = window.innerWidth;
+
+			if (w_h > 767) {
+				App.main.currnetMenu();
+			}
+		});
 	},
 	title : function(){
 		// 페이지별 title 변경
@@ -328,9 +395,9 @@ App.main = {
 
 		if(subTit.length){
 			if(boardViewTit.length){
-				$("title").text(boardViewTit + " > " + h3Tit + " > " + subTit + " > " + tit);
+				$("title").text(boardViewTit + ">" + h3Tit + ">" + subTit + ">" + tit);
 			}else{
-				$("title").text(h3Tit + " > " + subTit + " > " + tit);
+				$("title").text(h3Tit + ">" + subTit + ">" + tit);
 			}
 		}
 	},
@@ -353,12 +420,6 @@ App.main = {
 				$("#indicator .depth .depth1").text(subTit.text());
 			});
 		}
-
-		// if($("#indicator .depth").length == 1){
-		// 	$("#indicator .depth").eq(0).addClass("active");
-		// }else if($("#indicator .depth").length == 2){
-		// 	$("#indicator .depth").eq(1).addClass("active");
-		// }
 	},fileBox : function(){
 		// 파일업로드
 		var fileTarget = $('.filebox .upload-hidden');
@@ -442,7 +503,6 @@ App.main = {
 			});
 
 		});
-
 	}
 }
 
