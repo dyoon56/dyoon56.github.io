@@ -32,7 +32,7 @@ var Scratch = (function() {
             pictureOver: '',
             cursor: this.cursor,
             sceneWidth: 500,
-            sceneHeight: 500,
+            sceneHeight: 250,
             radius: 40,
             nPoints: 10,
             pointSize: this.pointSize,
@@ -146,7 +146,7 @@ var Scratch = (function() {
         }
         return {
             x: posX,
-            y: posY
+            y: posY,
         }
     };
     Scratch.prototype.scratch = function(e) {
@@ -160,6 +160,7 @@ var Scratch = (function() {
             this.ctx.clearRect(points.x, points.y, this.options.pointSize.x, this.options.pointSize.y);
         }
         this.percent = this.getPercent();
+
     };
     Scratch.prototype.getPercent = function() {
         var percent;

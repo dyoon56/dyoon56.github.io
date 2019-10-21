@@ -43,6 +43,7 @@ a:link,a:visited,a:active,a:focus{}
 a:hover{text-decoration:none;}
 .blind {position: absolute;overflow: hidden;clip: rect(0 0 0 0);margin: -1px;width: 1px;height: 1px;}
 .hide {display:none;}
+.relative {position:relative;}
 
 /* float해제 */
 .clearfix:after{content:''; display:block; clear:both;}

@@ -10,7 +10,7 @@
 	<meta property="og:url" content="" />
 	<meta property="og:image" content="" />
 	<meta property="og:description" content="" />
-	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="format-detection" content="telephone=no" />
 
 	<link rel="shortcut icon" type="image/x-icon" href="">
@@ -22,28 +22,7 @@
 	<!--[if lt IE 10]><script src="js/placeholders.min.js"></script><![endif]-->
 	<title></title>
 	<style>
-		.scratch_container {
-  position: relative;
-  margin: 0 auto;
-  max-width: 500px;
-}
-.scratch_viewport {
-  position: relative;
-  margin: 0 auto;
-  z-index: 0;
-  height:250px;
-}
-.scratch_picture-under {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  z-index: -1;
-}
-.scratch_container canvas {
-  position: relative;
-  z-index: 1;
-}
+		
 </style>
 </head>
 <body>
@@ -60,13 +39,18 @@
 		<div class="full_img">
 			<img src="images/front_img2.jpg" alt="행운 복권을 긁고 달력, 다이어리의 행운의 주인공이 되세요. 총 100분께 2020년 달력과 다이어리를 드립니다!" />
 		</div>
-		<div class="scratch_wrap">
-			<p class="blind">행운 복권을 긁어 보세요</p>
-			<div class="scratch_container">
-			  <div class="scratch_viewport">
-			    <!-- result picture -->
-			    <canvas id="js-scratch-canvas"></canvas>
-			  </div>
+		<div class="relative">
+			<!-- <div class="full_img">
+				<img src="images/front_img3.jpg" alt="카드 배경" />
+			</div> -->
+			<div class="scratch_wrap">
+				<p class="blind">행운 복권을 긁어 보세요</p>
+				<div class="scratch_container">
+				  <div class="scratch_viewport">
+				    <!-- result picture -->
+				    <canvas id="js-scratch-canvas"></canvas>
+				  </div>
+				</div>
 			</div>
 		</div>
 		<div class="full_img">
@@ -93,12 +77,12 @@
         y: '17'
     },
     radius: 20,
-    nPoints: 100,
+    nPoints: 70,
     percent:20,
     callback: function () {
       alert('당첨유무');
     },
-    pointSize: { x: 3, y: 3}
+    pointSize: { x: 2, y: 2}
 });
 
 </script>
