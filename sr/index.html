@@ -47,8 +47,10 @@
   height: auto;
   z-index: 1;
 }
-
-	</style>
+/*#mouse {
+	cursor:url(images/ee4486d1b3fc998e444c3b0100c73db282760eb5.png) 0 0,pointer;
+}*/
+</style>
 </head>
 <body>
 	<!-- <div>
@@ -57,7 +59,7 @@
 		</label>
 	</div> -->
 <div id="wrap">
-	<div class="front">
+	<div class="front" id="mouse">
 		<div class="full_img">
 			<img src="images/front_img1.jpg" alt="2020 한정판 달력 & 다이어리증정! 행운 복권 이벤트 이벤트 기간 2019년 10월 21일 ~ 10월 31일 당첨자 발표 2019년 11월 내 당첨자 개별 연락" />
 		</div>
@@ -86,24 +88,25 @@
 </div>
 <script src="https://www.cssscript.com/demo/touch-friendly-scratch-card-pure-javascript-scratchcard/js/Scratch.js"></script>
 <script>
-var scratch = new Scratch({
+	var scratch = new Scratch({
     canvasId: 'js-scratch-canvas',
-    imageBackground: 'images/scratch_bg.png',
-    pictureOver: 'images/scratch_wrap.png',
+    imageBackground: 'images/loose.jpg',
+    pictureOver: 'images/foreground.jpg',
     cursor: {
-    	png: 'images/cursor.png',
-        cur: 'images/cursor.cur',
+        png: 'images/piece.png',
+        cur: 'images/piece.cur',
         x: '20',
         y: '17'
     },
     radius: 20,
     nPoints: 100,
-    percent: 20,
+    percent: 50,
     callback: function () {
       alert('I am Callback.');
     },
     pointSize: { x: 3, y: 3}
 });
+
 </script>
 </body>
 </html>

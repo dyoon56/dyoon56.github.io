@@ -5,8 +5,8 @@
 .full_img {position:relative;}
 /*.full_img img {max-width:100%;}*/
 
-.scratch_wrap {position:relative;height:250px;}
-.scratch_wrap .scratch_container {position:absolute;left:50%;margin-left:-250px;top:0;}
+.scratch_wrap {position:relative;}
+.scratch_wrap .scratch_container {/*position:absolute;left:50%;margin-left:-250px;top:0;*/}
 
 [type="checkbox"].fancy-check {position: absolute;left: -9999px;}
 .fancy-check ~ label >  span {display: table-cell;vertical-align: middle;padding-left: 5px;}
