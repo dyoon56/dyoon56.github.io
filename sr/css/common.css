@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/* CSS Document */
+*{padding:0;margin:0;-webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;box-sizing: border-box;-ms-box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;font-family:'Bitgoeul', 'Malgun Gothic', '맑은 고딕','sans-serif';letter-spacing:-1px;line-height:1;color:#333;}
+h1,h2,h3,h4,h5,h6,em,strong,li,dd,a,address{padding:0;margin:0;}
+html{overflow-y:scroll;}
+html,body{width:100%;height:100%;-webkit-font-smoothing:antialiased;}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,tr,td,thead,tbody,form,fieldset,legend,input,textarea,button{margin:0;padding:0;}
+ul,ol,li,dl,dt,dd {list-style:none;}
+i,em,address{font-style:normal;}
+label,button{cursor:pointer;}
+button{border:none;background:none;vertical-align:middle;-webkit-appearance: none;-webkit-border-radius: 0;}
+img,fieldset,iframe {border:none;}
+img{vertical-align:top;}
+textarea{font-size:18px;resize: none;}
+hr,legend,caption {position: absolute;overflow: hidden;clip: rect(0 0 0 0);margin: -1px;width: 1px;height: 1px;}
+select {-webkit-appearance: none;-moz-appearance: none;-ms-appearance: none;-o-appearance: none;vertical-align:middle;border-radius: 0}
+select {background:url(../images/common/select_arrow.png) no-repeat right 30px center;}
+select::-ms-expand {display: none;}
+input,textarea {-webkit-appearance: none;-webkit-border-radius: 0;border:1px solid #e0e0e0;}
+input[type="text"],input[type="password"] {padding:0 5px;}
+input[type="text"]:disabled,input[type="password"]:disabled {background:#f9f9f9;}
+textarea {padding:10px;}
+table{border:none; border-collapse:collapse; padding:0; border-spacing:0;table-layout: fixed;width:100%;}
+u {text-decoration:none;}
+::-webkit-input-placeholder {font:16px 'Bitgoeul','Malgun Gothic', '맑은 고딕','sans-serif';}
+::-moz-placeholder {font:16px 'Bitgoeul','Malgun Gothic', '맑은 고딕','sans-serif';}
+:-ms-input-placeholder {font:16px 'Bitgoeul','Malgun Gothic', '맑은 고딕','sans-serif';}
+:-moz-placeholder {font:16px 'Bitgoeul','Malgun Gothic', '맑은 고딕','sans-serif';}
+
+/*기본*/
+#wrap{width:100%;position:relative;}
+#header{position:relative;}
+#container{position:relative;*zoom:1;}
+#container:after{display:block;clear:both;content:'';}
+.content_inner:after {display:block;clear:both;content:'';}
+#footer{position:relative;}
+
+a{text-decoration:none; color:#000;}
+a:link,a:visited,a:active,a:focus{}
+a:hover{text-decoration:none;}
+.blind {position: absolute;overflow: hidden;clip: rect(0 0 0 0);margin: -1px;width: 1px;height: 1px;}
+.hide {display:none;}
+
+/* float해제 */
+.clearfix:after{content:''; display:block; clear:both;}
+.fr {float:right;}
+.fl {float:left;}
+.wd50 {width:50%;float:left;}
+ul:after,ol:after {content:''; display:block; clear:both;}
+
+/*정렬*/
+.text-center {text-align:center !important;}
+.text-right {text-align:right !important;}
+.text-left {text-align:left !important;}
+
+/*display-table*/
+.table {display:table;width:100%;}
+.row {display:table-row;}
+.th {display:table-cell;vertical-align:middle;}
+.td {display:table-cell;vertical-align:middle;}
+.inline {display:inline-block;vertical-align:middle;}
+
+/*button*/
+a[class^="btn_"],button[class^="btn_"] {display:inline-block;vertical-align:middle;transition:all .2s;}
+
+.bg {display:none;z-index:99;position:fixed;left:0;top:0;width:100%;height:100%;background:#000;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+filter: alpha(opacity=60);
+-moz-opacity: 0.6;
+-khtml-opacity: 0.6;
+opacity: 0.6;}
