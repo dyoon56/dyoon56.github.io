@@ -146,7 +146,7 @@ var Scratch = (function() {
         }
         return {
             x: posX,
-            y: posY,
+            y: posY
         }
     };
     Scratch.prototype.scratch = function(e) {
@@ -155,9 +155,18 @@ var Scratch = (function() {
         var y = position.y - this.zone.top + window.pageYOffset;
         var i = 0;
         var len = this.options.nPoints;
+        var w_h = window.innerWidth;
         for (i; i < len; i++) {
             var points = this.clearPoint(x, y);
-            this.ctx.clearRect(points.x, points.y, this.options.pointSize.x, this.options.pointSize.y);
+
+            if(w_h < 450){
+                this.ctx.clearRect(points.x+(points.x*0.3968253968253969), points.y+(points.y*0.3968253968253969), this.options.pointSize.x+(this.options.pointSize.x*0.3968253968253969), this.options.pointSize.y+(this.options.pointSize.y*0.3968253968253969));
+            }else if(w_h >= 450 && w_h < 630){
+                this.ctx.clearRect(points.x, points.y, 2,2);
+            }else{
+                this.ctx.clearRect(points.x, points.y, this.options.pointSize.x, this.options.pointSize.y);                
+            }
+            
         }
         this.percent = this.getPercent();
 
