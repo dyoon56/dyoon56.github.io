@@ -3,9 +3,9 @@
 #wrap {max-width:630px;width:100%;margin:0 auto;}
 
 .full_img {position:relative;}
-/*.full_img img {max-width:100%;}*/
+.full_img img {max-width:100%;}
 
-.scratch_wrap {position:relative;}
+.scratch_wrap {position:relative;background:url(../images/front_img3.jpg) no-repeat center/cover;}
 .scratch_wrap .scratch_container {/*position:absolute;left:50%;margin-left:-250px;top:0;*/}
 
 [type="checkbox"].fancy-check {position: absolute;left: -9999px;}
