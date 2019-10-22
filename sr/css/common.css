@@ -15,7 +15,7 @@ button{border:none;background:none;vertical-align:middle;-webkit-appearance: non
 img,fieldset,iframe {border:none;}
 img{vertical-align:top;}
 textarea{font-size:18px;resize: none;}
-hr,legend,caption {position: absolute;overflow: hidden;clip: rect(0 0 0 0);margin: -1px;width: 1px;height: 1px;}
+hr,legend,caption {overflow: hidden;font-size:0;text-indent:-9999em;}
 select {-webkit-appearance: none;-moz-appearance: none;-ms-appearance: none;-o-appearance: none;vertical-align:top;border-radius: 0;padding:0 20px;border:1px solid #bfbfbf;background:url(../images/ico_select.png) no-repeat right 12px center;background-color:#fff;line-height:76px;font-size:22px;color:#bebebe;}
 select::-ms-expand {display: none;}
 input,textarea {-webkit-appearance: none;-webkit-border-radius: 0;border:1px solid #bfbfbf;background:#fff;font-size:22px;}
