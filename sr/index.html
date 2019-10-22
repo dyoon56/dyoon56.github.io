@@ -20,29 +20,20 @@
 	<script src="js/common.js"></script>
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<!--[if lt IE 10]><script src="js/placeholders.min.js"></script><![endif]-->
-	<title></title>
-	<style>
-		
-</style>
+	<title>카디프생명 행운 복권 이벤트</title>
 </head>
 <body>
-	<!-- <div>
-		<input type="checkbox" class="fancy-check" id="check1"/>
-		<label for="check1"><span>동의</span>
-		</label>
-	</div> -->
 <div id="wrap">
-	<div class="front" id="mouse">
+	<div class="full_img">
+		<img src="images/cdf_event_top.jpg" alt="2020 한정판 달력 & 다이어리증정! 행운 복권 이벤트 이벤트 기간 2019년 10월 21일 ~ 10월 31일 당첨자 발표 2019년 11월 내 당첨자 개별 연락" />
+	</div>
+
+	<!-- 이벤트 처음 화면 -->
+	<div id="cardifMain">
 		<div class="full_img">
-			<img src="images/front_img1.jpg" alt="2020 한정판 달력 & 다이어리증정! 행운 복권 이벤트 이벤트 기간 2019년 10월 21일 ~ 10월 31일 당첨자 발표 2019년 11월 내 당첨자 개별 연락" />
-		</div>
-		<div class="full_img">
-			<img src="images/front_img2.jpg" alt="행운 복권을 긁고 달력, 다이어리의 행운의 주인공이 되세요. 총 100분께 2020년 달력과 다이어리를 드립니다!" />
+			<img src="images/cdf_front_img1.jpg" alt="행운 복권을 긁고 달력, 다이어리의 행운의 주인공이 되세요. 총 100분께 2020년 달력과 다이어리를 드립니다!" />
 		</div>
 		<div class="relative">
-			<!-- <div class="full_img">
-				<img src="images/front_img3.jpg" alt="카드 배경" />
-			</div> -->
 			<div class="scratch_wrap">
 				<p class="blind">행운 복권을 긁어 보세요</p>
 				<div class="scratch_container">
@@ -52,18 +43,260 @@
 				  </div>
 				</div>
 			</div>
+			<img src="images/ico_coin.png" class="ico_coin" alt="" />
 		</div>
 		<div class="full_img">
-			<img src="images/front_img4.jpg" alt="* 동전으로 복권 스크래치를 긁어주세요." />
+			<img src="images/cdf_front_img3.jpg" alt="* 동전으로 복권 스크래치를 긁어주세요." />
 		</div>
 		<div class="full_img">
-			<img src="images/front_img5.jpg" alt="이벤트 경품 달력에는 작가가 디자인한 프랑스 감성을 담은 일러스트가 그려져 있습니다. 2020년 달력/다이어리(100명) 스타벅스 기프티콘(20명)" />
+			<img src="images/cdf_front_img4.jpg" alt="이벤트 경품 달력에는 작가가 디자인한 프랑스 감성을 담은 일러스트가 그려져 있습니다. 2020년 달력/다이어리(100명) 스타벅스 기프티콘(20명)" />
+		</div>
+	</div>
+	<!-- //이벤트 처음 화면 -->
+
+	<!-- 이벤트 달력, 다이어리 당첨 화면 -->
+	<div id="cardifWinDiary" class="result result1">
+		<div class="full_img">
+			<img src="images/cdf_win1_top.jpg" alt="축하합니다! 당첨입니다!! 배송 정보를 입력해 주세요. 2020년의 달력과 다이어리를 드립니다." />
+		</div>
+		<div class="input_wrap">
+			<p id="tbleDesc1" class="blind">수령인 성함, 수령인 연락처, 경품 수령 주소 정보 입력</p>
+			<table aria-describedby="tbleDesc1">
+				<caption>수령인 정보 입력</caption>
+				<colgroup>
+					<col width="28.5%" />
+					<col width="*" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">
+							<label for="winDiaryName">수령인 성함</label>
+						</th>
+						<td>
+							<input type="text" id="winDiaryName" placeholder="예) 홍길동" />
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+							수령인 연락처
+						</th>
+						<td class="td_phone">
+							<label for="winDiaryPhoneNume1" class="blind">연락처 앞자리</label>
+							<select name="" id="winDiaryPhoneNume1">
+								<option value="">선택</option>
+							</select>
+							<label for="winDiaryPhoneNume2" class="blind">연락처 중간자리</label>
+							<input type="text" id="winDiaryPhoneNume2" />
+							<label for="winDiaryPhoneNume3" class="blind">연락처 뒷자리</label>
+							<input type="text" id="winDiaryPhoneNume3" class="last" />
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+							경품 수령 주소
+						</th>
+						<td>
+							<label for="winDiaryAddress1" class="blind">주소</label>
+							<input type="text" id="winDiaryAddress1" readonly />
+							<div class="line2">
+								<label for="winDiaryAddress2" class="blind">나머지 주소</label>
+								<input type="text" id="winDiaryAddress2" placeholder="나머지 주소" />
+								<a href="#"><i>주소 검색</i></a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="chk_wrap clearfix">
+				<p>(필수) 개인정보 수집 및 이용 동의</p>
+				<div class="chkbox">
+					<input type="checkbox" class="fancy-check" id="chkArgree1"/>
+					<label for="chkArgree1"><span>동의</span>
+					</label>
+				</div>
+			</div>
+			<a href="#popPrivacy" rel='modal:open' class="btn_privacy"><i>개인정보 처리방침 자세히 보기</i></a>
 		</div>
 		<div class="full_img">
-			<img src="images/event_caution.jpg" alt="꼭 확인하세요! 본 이벤트는 하루에 한 번만 응모가 가능합니다. 이벤트 당첨자 선정 및 경품 전달을 위해 요청되는 개인정보를 모두 기입해 주시기 바랍니다. 응모 시 입력하신 정보는 이벤트 경품을 배송하기 위한 용도로만 사용되며 이용목적 달성 후 1개월 이내에 복구가 불가능한 방법으로 파기 됩니다. 참여자 본인 이름, 연락처가 아닌 정보로 참여하거나, 부정확한 정보를 입력할 시 당첨이 취소 될 수 있습니다. 응모 시 입력하신 개인정보는 추후 변경이 불가합니다. 모바일 쿠폰은 유효기간 내에 사용하셔야 하며, 유효기간 종료 후 재발송은 불가 합니다. 비정상적, 불법적인 방법으로 이벤트 참여 시 당첨이 불가하며, 당첨 후에도 별도 고지 없이 당첨이 취소될 수 있습니다. 경품 내역은 경품 제공 업체의 사정상 예고 없이 변경 또는 지연 될 수 있습니다. 모바일 쿠폰 발송 관련 문의는 내일LMC (02-539-4142)로 문의 바랍니다. 이벤트 경품은 1인 1회 제공을 원칙으로 합니다." />
+			<a href="#popComplete" rel='modal:open'>
+				<img src="images/cdf_win_btn.jpg" alt="경품 신청 완료" />
+			</a>
+		</div>
+	</div>
+	<!-- //이벤트 달력, 다이어리 당첨 화면 -->
+
+	<!-- 이벤트 스타벅스 당첨 화면 -->
+	<div id="cardifWinDiary" class="result result2">
+		<div class="full_img">
+			<img src="images/cdf_win2_top.jpg" alt="축하합니다! 당첨입니다!! 배송 정보를 입력해 주세요. 스타벅스 기프티콘을 드립니다." />
+		</div>
+		<div class="input_wrap">
+			<p id="tbleDesc2" class="blind">수령인 성함, 수령인 연락처 정보 입력</p>
+			<table aria-describedby="tbleDesc2">
+				<caption>수령인 정보 입력</caption>
+				<colgroup>
+					<col width="28.5%" />
+					<col width="*" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">
+							<label for="winStarbucksName">수령인 성함</label>
+						</th>
+						<td>
+							<input type="text" id="winStarbucksName" placeholder="예) 홍길동" />
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+							수령인 연락처
+						</th>
+						<td class="td_phone">
+							<label for="winStarbucksPhoneNume1" class="blind">연락처 앞자리</label>
+							<select name="" id="winStarbucksPhoneNume1">
+								<option value="">선택</option>
+							</select>
+							<label for="winStarbucksPhoneNume2" class="blind">연락처 중간자리</label>
+							<input type="text" id="winStarbucksPhoneNume2" />
+							<label for="winStarbucksPhoneNume3" class="blind">연락처 뒷자리</label>
+							<input type="text" id="winStarbucksPhoneNume3" class="last" />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="chk_wrap clearfix">
+				<p>(필수) 개인정보 수집 및 이용 동의</p>
+				<div class="chkbox">
+					<input type="checkbox" class="fancy-check" id="chkArgree2"/>
+					<label for="chkArgree2"><span>동의</span>
+					</label>
+				</div>
+			</div>
+			<a href="#popPrivacy" rel='modal:open' class="btn_privacy"><i>개인정보 처리방침 자세히 보기</i></a>
+		</div>
+		<div class="full_img">
+			<a href="#popComplete" rel='modal:open'>
+				<img src="images/cdf_win_btn.jpg" alt="경품 신청 완료" />
+			</a>
+		</div>
+	</div>
+	<!-- //이벤트 스타벅스 당첨 화면 -->
+
+	<!-- 이벤트 당첨 실패 화면 -->
+	<div id="cardifFailure" class="result result3">
+		<div class="full_img">
+			<img src="images/cdf_failure_img1.jpg" alt="아쉽지만 다음 기회에... 내일 다시 도전하세요!!" />
+		</div>
+		<div class="full_img">
+			<a href="https://www.cardif.co.kr/web/main">
+				<img src="images/cdf_failure_link1.jpg" alt="메인 페이지로" />	
+			</a>
+		</div>
+		<div class="full_img">
+			<img src="images/cdf_failure_img2.jpg" alt="BNP파리바 카디프 탄탄한 재정 건전성 글로벌 금융 그룹 BNP파리바의 풍부한 재정 건정성
+     글로벌 네트워크를 통한 탄탄한 보험 전문성 전 세계 1억 명이 선택한 신뢰할 수 있는 보험사 주요 상품 안내 더 쉬운 자산관리 ETF 변액보험 펀드 비용은 낮추고 자산관리는 전문가처럼 시그니처 ETF 변액 저축보험 투자 유형에 적합한 포트폴리오 제공 펀드 배분 정보를 주기적으로 제공 대출안심보장보험 대출금 대신 갚는 보험!" />
+		</div>
+		<div class="full_img">
+			<a href="https://www.cardif.co.kr/web/main/product">
+				<img src="images/cdf_failure_link2.jpg" alt="다른 상품 알아보기" />	
+			</a>
+		</div>
+	</div>
+	<!-- //이벤트 당첨 실패 화면 -->
+
+	<div class="full_img">
+		<img src="images/cdf_event_caution.jpg" alt="꼭 확인하세요! 본 이벤트는 하루에 한 번만 응모가 가능합니다. 이벤트 당첨자 선정 및 경품 전달을 위해 요청되는 개인정보를 모두 기입해 주시기 바랍니다. 응모 시 입력하신 정보는 이벤트 경품을 배송하기 위한 용도로만 사용되며 이용목적 달성 후 1개월 이내에 복구가 불가능한 방법으로 파기 됩니다. 참여자 본인 이름, 연락처가 아닌 정보로 참여하거나, 부정확한 정보를 입력할 시 당첨이 취소 될 수 있습니다. 응모 시 입력하신 개인정보는 추후 변경이 불가합니다. 모바일 쿠폰은 유효기간 내에 사용하셔야 하며, 유효기간 종료 후 재발송은 불가 합니다. 비정상적, 불법적인 방법으로 이벤트 참여 시 당첨이 불가하며, 당첨 후에도 별도 고지 없이 당첨이 취소될 수 있습니다. 경품 내역은 경품 제공 업체의 사정상 예고 없이 변경 또는 지연 될 수 있습니다. 모바일 쿠폰 발송 관련 문의는 내일LMC (02-539-4142)로 문의 바랍니다. 이벤트 경품은 1인 1회 제공을 원칙으로 합니다." />
+	</div>
+</div>
+
+<div class="bg"></div>
+<div class="bg_white"></div>
+
+<!-- 개인정보 수집 및 이용 동의 팝업 -->
+<div id="popPrivacy" class="popup">
+	<div class="popPrivacy_inner">
+		<h2><strong>(필수)</strong> 개인정보 수집 및 이용 동의</h2>
+		<div class="box_guide">
+			<div>
+				<h3>[소비자 권익 보호 사항]</h3>
+				<p>본 동의를 거부할 수 있으며, 거부하실 경우에는 이벤트에 참여 하실 수 없습니다.</p>
+				<br>
+				<ol>
+					<li>1. 개인정보 수집 및 이용
+						<ul>
+							<li>- 수집 항목: 이름, 휴대폰 번호, 주소</li>
+							<li>- 이용 목적: 이벤트 진행, 이벤트 당첨자 선정, 결과 발표, 경품 배송</li>
+							<li>- 개인정보 보유, 이용 기간: 이벤트 종료 후 1개월 </li>
+						</ul>
+					</li>
+					<li>
+						2. 개인 정보 제공회사는 고객님의 개인정보를 원칙적으로 외부에 제공하지 않습니다. <br>
+						다만, 아래의 경우 에는 예외로 합니다. <br>
+						법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우
+					</li>
+					<li>
+						3. 개인정보의 보유기간 동안 회사는 원칙적으로 개인정보 수집 및 제공 목적이 달성 된 후에 해당 정보를 지체없이 파기 합니다.
+						<br>
+						<p>파기 방법은 다음과 같습니다. </p>
+						<br>
+						<p>[파기절차]</p>
+						<ul>
+							<li>이벤트 참여를 위해 보내주신 정보는 목적이 달성된 후 배송과 관련된 민원 문의를 위해 일정기간 (1개월) 저장 후 파기합니다. </li>
+							<li>일정기간 (1개월) 저장된 정보는 법률에 의한 경우가 아니고서는 보유 이외의 다른 목적으로 이용하지 않습니다.</li>
+						</ul>
+						<br>
+						<p>[파기방법]</p>
+						<ul>
+							<li>전자적 형태로 저장된 개인정보: 재생할 수 없는 기술적 방법으로 삭제</li>
+						</ul>
+					</li>
+					<li>
+						4. 수집된 개인정보의 위탁 및 취급 방식
+						<p>이벤트 당첨자 선정 및 경품 발송을 위해 개인정보를 외부 전문 업체에 위탁하여 운영 하고 있습니다.</p>
+						<ol>
+							<li>
+								1) 이벤트 경품 발송
+								<ul>
+									<li>- 업체명: 대성전산 (연락처 확인 후 기재)</li>
+									<li>- 위탁업무내용: 다이어리, 달력 경품 발송</li>
+									<li>- 위탁기간: 이벤트 종료 후 1개월  (배송 문의 및 민원 해결을 위함)</li>
+									<li>- 개인정보 제 3자 제공에 대한 동의를 거부할 수 있으며, 이 경우 이벤트 참여가 제한됩니다.</li>
+								</ul>
+							</li>
+							<li>
+								2) 이벤트 경품 발송
+								<ul>
+									<li>- 업체명 : 내일LMC (연락처 확인 후 기재)</li>
+									<li>- 위탁업무내용 : 기프티콘 발송</li>
+									<li>- 위탁기간 : 이벤트 종료 후 1개월 (배송 문의 및 민원 해결을 위함)</li>
+									<li>- 개인정보 제 3자 제공에 대한 동의를 거부할 수 있으며, 이 경우 이벤트 참여가 제한됩니다.</li>
+								</ul>
+							</li>
+						</ol>
+					</li>
+				</ol>
+				<p>위 업체는 수탁 받은 고객님의 개인 정보를 이벤트 당첨자 선정 및 경품 발송의 목적으로만 사용하며, 그 외 다른 용도로 사용하지 않습니다.</p>
+			</div>
+		</div>
+	</div>
+	<a href="#" class="btn_close">닫기</a>
+</div>
+<!-- //개인정보 수집 및 이용 동의 팝업 -->
+
+<!-- 이벤트 참여 완료 화면 -->
+<div id="popComplete" class="popup">
+	<div class="full_img">
+		<div class="table">
+			<div class="td">
+				<a href="https://www.cardif.co.kr/web/main">
+					<img src="images/cdf_complete_img1.png" alt="참여해주셔서 감사합니다. 당첨자 경품은 2019년 11월 중 발송 됩니다. 메인 페이지로" />
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
+<!-- //이벤트 참여 완료 화면 -->
+
 <script src="js/Scratch.js"></script>
 <script>
 	var scratch = new Scratch({
@@ -71,20 +304,19 @@
     imageBackground: 'images/scratch_bg.png',
     pictureOver: 'images/scratch_wrap.png',
     cursor: {
-        png: 'images/piece.png',
-        cur: 'images/piece.cur',
+        png: 'images/cursor_img.png',
+        cur: 'images/cursor_img.cur',
         x: '20',
         y: '17'
     },
     radius: 20,
     nPoints: 100,
-    percent:10,
+    percent:5,
     callback: function () {
-      alert('당첨유무 분기');
+      alert("callback line315");
     },
     pointSize: { x: 2, y: 2}
 });
-
 </script>
 </body>
 </html>

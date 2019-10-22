@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 /* CSS Document */
-*{padding:0;margin:0;-webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;box-sizing: border-box;-ms-box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;font-family:'Bitgoeul', 'Malgun Gothic', '맑은 고딕','sans-serif';letter-spacing:-1px;line-height:1;color:#333;}
+*{padding:0;margin:0;-webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;box-sizing: border-box;-ms-box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;font-family:'Noto Sans KR', 'Malgun Gothic', '맑은 고딕','sans-serif';letter-spacing:-1px;line-height:1;color:#333;}
 h1,h2,h3,h4,h5,h6,em,strong,li,dd,a,address{padding:0;margin:0;}
 html{overflow-y:scroll;}
 html,body{width:100%;height:100%;-webkit-font-smoothing:antialiased;}
@@ -16,19 +16,18 @@ img,fieldset,iframe {border:none;}
 img{vertical-align:top;}
 textarea{font-size:18px;resize: none;}
 hr,legend,caption {position: absolute;overflow: hidden;clip: rect(0 0 0 0);margin: -1px;width: 1px;height: 1px;}
-select {-webkit-appearance: none;-moz-appearance: none;-ms-appearance: none;-o-appearance: none;vertical-align:middle;border-radius: 0}
-select {background:url(../images/common/select_arrow.png) no-repeat right 30px center;}
+select {-webkit-appearance: none;-moz-appearance: none;-ms-appearance: none;-o-appearance: none;vertical-align:top;border-radius: 0;padding:0 20px;border:1px solid #bfbfbf;background:url(../images/ico_select.png) no-repeat right 12px center;background-color:#fff;line-height:76px;font-size:22px;color:#bebebe;}
 select::-ms-expand {display: none;}
-input,textarea {-webkit-appearance: none;-webkit-border-radius: 0;border:1px solid #e0e0e0;}
-input[type="text"],input[type="password"] {padding:0 5px;}
+input,textarea {-webkit-appearance: none;-webkit-border-radius: 0;border:1px solid #bfbfbf;background:#fff;font-size:22px;}
+input[type="text"],input[type="password"] {padding:0 20px;line-height:76px;vertical-align:top;}
 input[type="text"]:disabled,input[type="password"]:disabled {background:#f9f9f9;}
 textarea {padding:10px;}
 table{border:none; border-collapse:collapse; padding:0; border-spacing:0;table-layout: fixed;width:100%;}
 u {text-decoration:none;}
-::-webkit-input-placeholder {font:16px 'Bitgoeul','Malgun Gothic', '맑은 고딕','sans-serif';}
-::-moz-placeholder {font:16px 'Bitgoeul','Malgun Gothic', '맑은 고딕','sans-serif';}
-:-ms-input-placeholder {font:16px 'Bitgoeul','Malgun Gothic', '맑은 고딕','sans-serif';}
-:-moz-placeholder {font:16px 'Bitgoeul','Malgun Gothic', '맑은 고딕','sans-serif';}
+::-webkit-input-placeholder {font:22px 'Noto Sans KR','Malgun Gothic', '맑은 고딕','sans-serif';line-height:76px;color:#bebebe;}
+::-moz-placeholder {font:22px 'Noto Sans KR','Malgun Gothic', '맑은 고딕','sans-serif';line-height:76px;color:#bebebe;}
+:-ms-input-placeholder {font:22px 'Noto Sans KR','Malgun Gothic', '맑은 고딕','sans-serif';line-height:76px;color:#bebebe;}
+:-moz-placeholder {font:22px 'Noto Sans KR','Malgun Gothic', '맑은 고딕','sans-serif';line-height:76px;color:#bebebe;}
 
 /*기본*/
 #wrap{width:100%;position:relative;}
@@ -60,16 +59,22 @@ ul:after,ol:after {content:''; display:block; clear:both;}
 /*display-table*/
 .table {display:table;width:100%;}
 .row {display:table-row;}
-.th {display:table-cell;vertical-align:middle;}
-.td {display:table-cell;vertical-align:middle;}
+.th {display:table-cell;vertical-align:middle;text-align:center;}
+.td {display:table-cell;vertical-align:middle;text-align:center;}
 .inline {display:inline-block;vertical-align:middle;}
 
 /*button*/
 a[class^="btn_"],button[class^="btn_"] {display:inline-block;vertical-align:middle;transition:all .2s;}
 
 .bg {display:none;z-index:99;position:fixed;left:0;top:0;width:100%;height:100%;background:#000;
--ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-filter: alpha(opacity=60);
--moz-opacity: 0.6;
--khtml-opacity: 0.6;
-opacity: 0.6;}
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+filter: alpha(opacity=80);
+-moz-opacity: 0.8;
+-khtml-opacity: 0.8;
+opacity: 0.8;}
+.bg_white {display:none;z-index:99;position:fixed;left:0;top:0;width:100%;height:100%;background:#fff;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+filter: alpha(opacity=95);
+-moz-opacity: 0.95;
+-khtml-opacity: 0.95;
+opacity: 0.95;}

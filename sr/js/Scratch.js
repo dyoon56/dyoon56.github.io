@@ -1,3 +1,9 @@
+var w_h = window.innerWidth;
+
+window.onresize = function(event) {
+    w_h = window.innerWidth;
+};
+
 var Scratch = (function() {
     function mergeOptions(obj1, obj2) {
         var obj3 = {};
@@ -155,7 +161,7 @@ var Scratch = (function() {
         var y = position.y - this.zone.top + window.pageYOffset;
         var i = 0;
         var len = this.options.nPoints;
-        var w_h = window.innerWidth;
+
         for (i; i < len; i++) {
             var points = this.clearPoint(x, y);
 
